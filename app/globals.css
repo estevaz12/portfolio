@@ -1,19 +1,73 @@
+@import '@picocss/pico';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --background-color: #fff;
+  --primary: hsl(192, 70, 43);
+  --primary-hover: hsl(200, 95, 14);
+  --primary-focus: hsl(192, 70, 43, 0.125);
+  --primary-inverse: #fff;
+  --contrast: hsl(35, 88, 16);
+  --contrast-hover: hsl(36, 83%, 5%);
+  --contrast-focus: hsl(35, 88, 16, 0.125);
+  --contrast-inverse: #fff;
+}
+
+/* Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: hsl(35, 88, 16);
+    --primary: hsl(192, 70, 43);
+    --primary-hover: hsl(199, 64, 73);
+    --primary-focus: hsl(192, 70, 43, 0.25);
+    --primary-inverse: #fff;
+    --contrast: hsl(88, 60, 50);
+    --contrast-hover: hsl(88, 75%, 55%);
+    --contrast-focus: hsl(88, 60, 50, 0.25);
+    --contrast-inverse: #000;
+  }
+}
+
+/* Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme='dark'] {
+  --background-color: hsl(35, 88, 16);
+  --primary: hsl(192, 70, 43);
+  --primary-hover: hsl(199, 64, 73);
+  --primary-focus: hsl(192, 70, 43, 0.25);
+  --primary-inverse: #fff;
+  --contrast: hsl(88, 60, 50);
+  --contrast-hover: hsl(88, 75%, 55%);
+  --contrast-focus: hsl(88, 60, 50, 0.25);
+  --contrast-inverse: #000;
+}
+
+/* Common styles */
 :root {
   --light-blue: hsl(199, 64, 73);
   --mid-blue: hsl(192, 70, 43);
   --dark-blue: hsl(200, 95, 14);
   --green: hsl(88, 60, 50);
   --coffee: hsl(35, 88, 16);
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
-body {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  font-family: var(--grotesk) !important;
 }

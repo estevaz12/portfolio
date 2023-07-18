@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--inter)'],
+      },
       backgroundImage: {
         'intro-gradient': 'linear-gradient(135deg, var(--tw-gradient-stops))',
       },
