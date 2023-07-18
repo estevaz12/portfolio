@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
-import Background from '@/public/background.svg';
+import Background from './components/Background';
+import LockScreen from './components/LockScreen';
 
 const inter = Inter({ subsets: ['latin'] });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={`${inter.className} ${grotesk.variable}`}>
         <Background />
+        <LockScreen />
         {children}
       </body>
     </html>
