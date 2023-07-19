@@ -1,5 +1,4 @@
-// import '@picocss/pico';
-import './globals.css';
+import './css/globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
 import Background from './components/Background';
 import LockScreen from './components/LockScreen';
@@ -31,8 +30,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={`${inter.class} ${grotesk.variable}`}>
+    <html lang='en' className={`${inter.variable} ${grotesk.variable}`}>
+      <body>
         <Background />
         <LockScreen />
         {children}

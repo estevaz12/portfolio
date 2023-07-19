@@ -1,7 +1,5 @@
+@import './tailwind.css';
 @import '@picocss/pico';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Light scheme (Default) */
 /* Can be forced with data-theme="light" */
@@ -55,6 +53,7 @@
   --dark-blue: hsl(200, 95, 14);
   --green: hsl(88, 60, 50);
   --coffee: hsl(35, 88, 16);
+  --font-family: var(--inter);
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
@@ -67,7 +66,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
   font-family: var(--grotesk) !important;
 }
