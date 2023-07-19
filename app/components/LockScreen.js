@@ -1,4 +1,8 @@
 import Image from 'next/image';
+import Resume from '../icons/resume.svg';
+import Lang from '../icons/lang.svg';
+import Dark from '../icons/dark.svg';
+import Light from '../icons/light.svg';
 
 export default function LockScreen() {
   return (
@@ -25,10 +29,14 @@ export default function LockScreen() {
             </p>
           </div>
         </div>
-        <div className='text-white justify-self-end drop-shadow-sm'>
-          Click or tap to unlock
+        <div className='text-center text-white'>
+          <small className='drop-shadow-sm animate-pulse'>
+            Click or tap to unlock
+          </small>
         </div>
-        <div className=''>Other stuff</div>
+        <div className='text-center text-white'>
+          <small>📄Resume &#x2022; 🌐Español &#x2022; 🌙Theme</small>
+        </div>
       </div>
     </div>
   );
