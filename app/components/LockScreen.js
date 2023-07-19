@@ -3,6 +3,7 @@ import Resume from '../icons/resume.svg';
 import Lang from '../icons/lang.svg';
 import Dark from '../icons/dark.svg';
 import Light from '../icons/light.svg';
+import Link from 'next/link';
 
 export default function LockScreen() {
   return (
@@ -34,8 +35,24 @@ export default function LockScreen() {
             Click or tap to unlock
           </small>
         </div>
-        <div className='text-center text-white'>
-          <small>📄Resume &#x2022; 🌐Español &#x2022; 🌙Theme</small>
+        <div className='text-center text-white/70'>
+          <Link href='#' className='hover:no-underline'>
+            <small className='drop-shadow-sm hover:text-white/100'>
+              <Resume width='0.875em' height='0.875em' /> Resume
+            </small>
+          </Link>
+          &emsp;
+          <Link href='#' className='hover:no-underline'>
+            <small className='drop-shadow-sm hover:text-white/100'>
+              <Lang width='0.875em' height='0.875em' /> Español
+            </small>
+          </Link>
+          &emsp;
+          <Link href='#' className='hover:no-underline'>
+            <small className='drop-shadow-sm hover:text-white/100'>
+              <Light width='0.875em' height='0.875em' /> Theme
+            </small>
+          </Link>
         </div>
       </div>
     </div>

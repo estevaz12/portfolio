@@ -68,3 +68,7 @@ h5,
 h6 {
   font-family: var(--grotesk) !important;
 }
+
+svg {
+  display: unset;
+}

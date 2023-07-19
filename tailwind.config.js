@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class', 'data-theme="dark"'],
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -23,6 +24,7 @@ module.exports = {
         green: '#85cb33',
         coffee: '#4c2e05',
         black: '#000',
+        muted: 'hsl(205, 10%, 50%)',
       },
     },
   },

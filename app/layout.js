@@ -30,7 +30,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en' className={`${inter.variable} ${grotesk.variable}`}>
+    <html
+      lang='en'
+      data-theme='dark'
+      className={`${inter.variable} ${grotesk.variable}`}
+    >
       <body>
         <Background />
         <LockScreen />
