@@ -6,13 +6,13 @@
 [data-theme='light'],
 :root:not([data-theme='dark']) {
   --background-color: #fff;
-  --primary: hsl(192, 70, 43);
-  --primary-hover: hsl(200, 95, 14);
-  --primary-focus: hsl(192, 70, 43, 0.125);
+  --primary: hsl(192, 70%, 43%);
+  --primary-hover: hsl(200, 94%, 14%);
+  --primary-focus: hsla(192, 70%, 43%, 0.125);
   --primary-inverse: #fff;
-  --contrast: hsl(35, 88, 16);
+  --contrast: hsl(35, 88%, 16%);
   --contrast-hover: hsl(36, 83%, 5%);
-  --contrast-focus: hsl(35, 88, 16, 0.125);
+  --contrast-focus: hsla(35, 88%, 16%, 0.125);
   --contrast-inverse: #fff;
 }
 
@@ -20,39 +20,43 @@
 /* Automatically enabled if user has Dark mode enabled */
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --background-color: hsl(35, 88, 16);
-    --primary: hsl(192, 70, 43);
-    --primary-hover: hsl(199, 64, 73);
-    --primary-focus: hsl(192, 70, 43, 0.25);
-    --primary-inverse: #fff;
-    --contrast: hsl(88, 60, 50);
-    --contrast-hover: hsl(88, 75%, 55%);
-    --contrast-focus: hsl(88, 60, 50, 0.25);
-    --contrast-inverse: #000;
+    --background-color: hsl(34, 85%, 5%);
+    --primary: hsl(88, 60%, 50%);
+    --primary-hover: hsla(88, 60%, 50%, 0.75);
+    --primary-focus: hsla(88, 60%, 50%, 0.25);
+    --primary-inverse: #000;
+    --contrast: hsl(192, 70%, 43%);
+    --contrast-hover: hsl(199, 64%, 73%);
+    --contrast-focus: hsla(192, 70%, 43%, 0.25);
+    --contrast-inverse: #fff;
+    --card-background-color: var(--background-color);
+    --muted-border-color: hsla(35, 88%, 16%, 0.6);
   }
 }
 
 /* Dark scheme (Forced) */
 /* Enabled if forced with data-theme="dark" */
 [data-theme='dark'] {
-  --background-color: hsl(35, 88, 16);
-  --primary: hsl(192, 70, 43);
-  --primary-hover: hsl(199, 64, 73);
-  --primary-focus: hsl(192, 70, 43, 0.25);
-  --primary-inverse: #fff;
-  --contrast: hsl(88, 60, 50);
-  --contrast-hover: hsl(88, 75%, 55%);
-  --contrast-focus: hsl(88, 60, 50, 0.25);
-  --contrast-inverse: #000;
+  --background-color: hsl(34, 85%, 5%);
+  --primary: hsl(88, 60%, 50%);
+  --primary-hover: hsla(88, 60%, 50%, 0.75);
+  --primary-focus: hsla(88, 60%, 50%, 0.25);
+  --primary-inverse: #000;
+  --contrast: hsl(192, 70%, 43%);
+  --contrast-hover: hsl(199, 64%, 73%);
+  --contrast-focus: hsla(192, 70%, 43%, 0.25);
+  --contrast-inverse: #fff;
+  --card-background-color: var(--background-color);
+  --muted-border-color: hsla(35, 88%, 16%, 0.6);
 }
 
 /* Common styles */
 :root {
-  --light-blue: hsl(199, 64, 73);
-  --mid-blue: hsl(192, 70, 43);
-  --dark-blue: hsl(200, 95, 14);
-  --green: hsl(88, 60, 50);
-  --coffee: hsl(35, 88, 16);
+  --light-blue: hsl(199, 64%, 73%);
+  --mid-blue: hsl(192, 70%, 43%);
+  --dark-blue: hsl(200, 94%, 14%);
+  --green: hsl(88, 60%, 50%);
+  --coffee: hsl(33, 85%, 5%);
   --font-family: var(--inter);
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);

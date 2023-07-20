@@ -1,7 +1,6 @@
 import './css/globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
 import Background from './components/Background';
-import LockScreen from './components/LockScreen';
 
 const inter = Inter({ subsets: ['latin'], variable: '--inter' });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
@@ -16,7 +15,7 @@ export const metadata = {
   //   },
   // },
   title: `@estevaz12's Portfolio`,
-  description: 'My personal portfolio',
+  description: `@estevaz12's personal portfolio`,
   // openGraph: {
   //   title: t('title'),
   //   description: t('description'),
@@ -37,7 +36,6 @@ export default function RootLayout({ children }) {
     >
       <body>
         <Background />
-        <LockScreen />
         {children}
       </body>
     </html>
