@@ -30,7 +30,8 @@ export default function Sidebar() {
             </li>
             <li>
               <Link
-                href='#'
+                href='http://disciplestoday.org/'
+                target='_blank'
                 className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
               >
                 Church&nbsp;&nbsp;
@@ -92,7 +93,7 @@ const pages = [
     name: 'About',
     icon: (
       <About
-        color='#CC4BC2'
+        color='#54DEFD'
         className='w-[var(--font-size)] h-[var(--font-size)]'
       />
     ),
@@ -112,16 +113,16 @@ const options = [
   {
     name: 'Resume',
     href: '#',
-    icon: <Resume color='#BF00FF' width='0.875em' height='0.875em' />,
-  },
-  {
-    name: 'Español',
-    href: '#',
-    icon: <Lang color='#54DEFD' width='0.875em' height='0.875em' />,
+    icon: <Resume color='#E2124D' width='0.875em' height='0.875em' />,
   },
   {
     name: 'Theme',
     href: '#',
     icon: <Dark color='#FFB10A' width='0.875em' height='0.875em' />,
+  },
+  {
+    name: 'Español',
+    href: '#',
+    icon: <Lang color='#54DEFD' width='0.875em' height='0.875em' />,
   },
 ];

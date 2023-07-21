@@ -22,7 +22,7 @@
   :root:not([data-theme]) {
     --background-color: hsl(34, 85%, 5%);
     --primary: hsl(88, 60%, 50%);
-    --primary-hover: hsla(88, 60%, 50%, 0.75);
+    --primary-hover: hsla(88, 60%, 50%, 0.6);
     --primary-focus: hsla(88, 60%, 50%, 0.25);
     --primary-inverse: #000;
     --contrast: hsl(192, 70%, 43%);
@@ -39,7 +39,7 @@
 [data-theme='dark'] {
   --background-color: hsl(34, 85%, 5%);
   --primary: hsl(88, 60%, 50%);
-  --primary-hover: hsla(88, 60%, 50%, 0.75);
+  --primary-hover: hsla(88, 60%, 50%, 0.6);
   --primary-focus: hsla(88, 60%, 50%, 0.25);
   --primary-inverse: #000;
   --contrast: hsl(192, 70%, 43%);
