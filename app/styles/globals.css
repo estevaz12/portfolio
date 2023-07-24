@@ -68,6 +68,7 @@
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
+  --golden-ratio: 1.618;
 }
 
 h1,
