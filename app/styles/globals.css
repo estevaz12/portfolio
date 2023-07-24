@@ -30,7 +30,10 @@
     --contrast-focus: hsla(192, 70%, 43%, 0.25);
     --contrast-inverse: #fff;
     --card-background-color: var(--background-color);
-    --muted-border-color: hsla(35, 88%, 16%, 0.75);
+    --muted-color: hsl(35, 87%, 28%);
+    --muted-border-color: hsla(35, 87%, 28%, 0.75);
+    --form-element-background-color: var(--background-color);
+    --form-element-border-color: var(--muted-border-color);
   }
 }
 
@@ -47,7 +50,10 @@
   --contrast-focus: hsla(192, 70%, 43%, 0.25);
   --contrast-inverse: #fff;
   --card-background-color: var(--background-color);
-  --muted-border-color: hsla(35, 88%, 16%, 0.75);
+  --muted-color: hsl(35, 87%, 28%);
+  --muted-border-color: hsla(35, 87%, 28%, 0.75);
+  --form-element-background-color: var(--background-color);
+  --form-element-border-color: var(--muted-border-color);
 }
 
 /* Common styles */

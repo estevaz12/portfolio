@@ -1,16 +1,5 @@
-import Close from '@/icons/close.svg';
+import Header from '@/components/Header';
 
 export default function Projects() {
-  return <h1>Projects</h1>;
+  return <Header title='Projects' isSearchEnabled={true} />;
 }
-
-// function Container() {
-//   return (
-//     <div>
-//       <h1>{children}</h1>
-//       <p>{children}</p>
-//     </div>
-//   );
-// }
-
-// <Container>text</Container>
