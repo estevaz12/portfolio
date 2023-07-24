@@ -1,4 +1,4 @@
-import Close from '@/app/icons/close.svg';
+import Close from '@/icons/close.svg';
 
 export default function Projects() {
   return <h1>Projects</h1>;

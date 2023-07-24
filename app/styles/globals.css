@@ -30,7 +30,7 @@
     --contrast-focus: hsla(192, 70%, 43%, 0.25);
     --contrast-inverse: #fff;
     --card-background-color: var(--background-color);
-    --muted-border-color: hsla(35, 88%, 16%, 0.6);
+    --muted-border-color: hsla(35, 88%, 16%, 0.75);
   }
 }
 
@@ -47,7 +47,7 @@
   --contrast-focus: hsla(192, 70%, 43%, 0.25);
   --contrast-inverse: #fff;
   --card-background-color: var(--background-color);
-  --muted-border-color: hsla(35, 88%, 16%, 0.6);
+  --muted-border-color: hsla(35, 88%, 16%, 0.75);
 }
 
 /* Common styles */

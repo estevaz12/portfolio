@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Resume from './icons/resume.svg';
-import Lang from './icons/lang.svg';
-import Dark from './icons/dark.svg';
-import Light from './icons/light.svg';
+import Resume from '@/icons/resume.svg';
+import Lang from '@/icons/lang.svg';
+import Dark from '@/icons/dark.svg';
+import Light from '@/icons/light.svg';
 import Link from 'next/link';
 
 export default function LockScreen() {
@@ -40,12 +40,12 @@ export default function LockScreen() {
             <Resume width='0.875em' height='0.875em' />
           </Option>
           &emsp;
-          <Option href='#' name='Español'>
-            <Lang width='0.875em' height='0.875em' />
-          </Option>
-          &emsp;
           <Option href='#' name='Theme'>
             <Dark width='0.875em' height='0.875em' />
+          </Option>
+          &emsp;
+          <Option href='#' name='Español'>
+            <Lang width='0.875em' height='0.875em' />
           </Option>
         </div>
       </div>

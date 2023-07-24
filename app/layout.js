@@ -1,6 +1,6 @@
-import './css/globals.css';
+import './styles/globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
-import Background from './components/Background';
+import Background from '@/components/Background';
 
 const inter = Inter({ subsets: ['latin'], variable: '--inter' });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
