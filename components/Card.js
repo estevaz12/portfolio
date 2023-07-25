@@ -3,7 +3,7 @@ import Date from './Date';
 
 export default function Card({ title, desc, date, page }) {
   return (
-    <article className='m-0'>
+    <article className='m-0 w-[var(--gr-width)]'>
       <header className='relative h-40 overflow-hidden'>
         <Image
           src={`/${page}/preview.png`}

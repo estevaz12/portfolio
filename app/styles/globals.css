@@ -78,7 +78,10 @@
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
-  --golden-ratio: 1.618;
+  --gr: 1.618;
+  --gr-width: calc(100% / var(--gr));
+  --gr-width-half: calc(var(--gr-width) / 2);
+  --gr-height: calc(100% / var(--gr));
   --grid-spacing-vertical: 1rem;
 }
 

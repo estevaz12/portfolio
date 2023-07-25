@@ -7,7 +7,7 @@ export default function UnlockedLayout({ children }) {
         <div className='h-full overflow-hidden basis-1/6 bg-coffee/80 backdrop-blur'>
           <Sidebar />
         </div>
-        <div className='h-full basis-5/6 pt-[var(--typography-spacing-vertical)] container-fluid bg-coffee/75 backdrop-blur-sm overflow-y-scroll overflow-x-hidden'>
+        <div className='h-full basis-5/6 py-[var(--typography-spacing-vertical)] container-fluid bg-coffee/75 backdrop-blur-sm overflow-y-scroll overflow-x-hidden'>
           {children}
         </div>
       </main>

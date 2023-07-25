@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <>
       <Header title='Projects' isSearchEnabled={true} />
-      <div className='grid grid-cols-2'>
+      <div className='grid grid-cols-3'>
         {postsData.map((post) => (
           <Card
             key={post.id}
