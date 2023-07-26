@@ -3,8 +3,8 @@ import Date from './Date';
 
 export default function Card({ title, desc, date, page }) {
   return (
-    <article className='m-0 w-[var(--gr-width)]'>
-      <header className='relative h-40 overflow-hidden'>
+    <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
+      <header className='relative overflow-hidden h-52'>
         <Image
           src={`/${page}/preview.png`}
           alt={`Preview of ${title} project`}
@@ -13,16 +13,20 @@ export default function Card({ title, desc, date, page }) {
         />
       </header>
       <hgroup className='m-0'>
-        <h3>{title}</h3>
-        <p className='m-0 truncate'>{desc}</p>
+        <h4>{title}</h4>
+        <p className='m-0 line-clamp-2 text-[var(--contrast-inverse)]'>
+          {desc}
+        </p>
         <p className='m-0'>
-          {date === 'null' ? (
-            '🏗️ Developing'
-          ) : (
-            <>
-              ✅ <Date dateStr={date} />
-            </>
-          )}
+          <small>
+            {date === 'null' ? (
+              '🏗️ Developing'
+            ) : (
+              <>
+                ✅ <Date dateStr={date} />
+              </>
+            )}
+          </small>
         </p>
       </hgroup>
     </article>

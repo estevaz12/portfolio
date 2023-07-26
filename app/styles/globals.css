@@ -30,8 +30,8 @@
     --contrast-focus: hsla(192, 70%, 43%, 0.25);
     --contrast-inverse: #fff;
     --card-background-color: var(--background-color);
-    --muted-color: hsl(35, 87%, 28%);
-    --muted-border-color: hsla(35, 87%, 28%, 0.75);
+    --muted-color: hsl(35, 94%, 31%);
+    --muted-border-color: hsla(35, 94%, 31%, 0.5);
     --form-element-background-color: var(--background-color);
     --form-element-border-color: var(--muted-border-color);
   }
@@ -55,8 +55,8 @@
   --contrast-focus: hsla(192, 70%, 43%, 0.25);
   --contrast-inverse: #fff;
   --card-background-color: var(--background-color);
-  --muted-color: hsl(35, 87%, 28%);
-  --muted-border-color: hsla(35, 87%, 28%, 0.75);
+  --muted-color: hsl(35, 94%, 31%);
+  --muted-border-color: hsla(35, 94%, 31%, 0.5);
   --form-element-background-color: var(--background-color);
   --form-element-border-color: var(--muted-border-color);
 
@@ -108,3 +108,7 @@ svg {
   width: 100vw;
   overflow: hidden;
 }
+
+/* .golden-ratio {
+  padding-bottom: 61.8%;
+} */

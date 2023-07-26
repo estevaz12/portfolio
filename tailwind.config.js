@@ -25,7 +25,7 @@ module.exports = {
         green: '#85cb33',
         coffee: '#180e02',
         black: '#000',
-        muted: 'hsl(35, 87%, 28%)',
+        muted: 'hsl(35, 94%, 31%)',
       },
     },
   },
