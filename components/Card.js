@@ -18,15 +18,7 @@ export default function Card({ title, desc, date, page }) {
           {desc}
         </p>
         <p className='m-0'>
-          <small>
-            {date === 'null' ? (
-              '🏗️ Developing'
-            ) : (
-              <>
-                ✅ <Date dateStr={date} />
-              </>
-            )}
-          </small>
+          <Date dateStr={date} />
         </p>
       </hgroup>
     </article>

@@ -1,4 +1,4 @@
-import Layout from '@/components/post/Layout';
+import PostLayout from '@/components/PostLayout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 
 export async function generateStaticParams() {
@@ -9,17 +9,20 @@ export async function generateStaticParams() {
   });
 }
 
-export default function Project({ params }) {
+export default async function Project({ params }) {
   const { id } = params;
-  const post = getPostData('projects', id);
+  const post = await getPostData('projects', id);
 
   return (
-    <Layout
+    <PostLayout
       title={post.title}
       date={post.date}
       headerImg={`/projects/${post.id}/preview.png`}
     >
-      {post.content}
-    </Layout>
+      <div
+        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        className='[&>:last-child]:mb-0'
+      />
+    </PostLayout>
   );
 }

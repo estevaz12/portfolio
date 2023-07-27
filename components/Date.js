@@ -1,7 +1,19 @@
 import { parseISO, format } from 'date-fns';
 
 export default function Date({ dateStr }) {
-  const date = parseISO(dateStr);
-  return <time dateTime='dateString'>{format(date, 'LLLL d, yyyy')}</time>;
+  return (
+    <small>
+      {dateStr === 'null' ? (
+        '🏗️ Developing'
+      ) : (
+        <>
+          ✅{' '}
+          <time dateTime='dateString'>
+            {format(parseISO(dateStr), 'LLLL d, yyyy')}
+          </time>
+        </>
+      )}
+    </small>
+  );
 }
 // date-fns has i18n support, see docs
