@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import Projects from '../icons/projects.svg';
-import Skills from '../icons/skills.svg';
-import About from '../icons/about.svg';
-import Contact from '../icons/contact.svg';
-import OutLink from '../icons/out-link.svg';
-import Resume from '../icons/resume.svg';
-import Lang from '../icons/lang.svg';
-import Dark from '../icons/dark.svg';
-import Light from '../icons/light.svg';
+import Projects from '../icons/ui/projects.svg';
+import Skills from '../icons/ui/skills.svg';
+import About from '../icons/ui/about.svg';
+import Contact from '../icons/ui/contact.svg';
+import OutLink from '../icons/ui/out-link.svg';
+import Resume from '../icons/ui/resume.svg';
+import Lang from '../icons/ui/lang.svg';
+import Dark from '../icons/ui/dark.svg';
+import Light from '../icons/ui/light.svg';
 
 export default function Sidebar() {
   return (

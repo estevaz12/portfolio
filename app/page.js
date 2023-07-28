@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import Resume from '@/icons/resume.svg';
-import Lang from '@/icons/lang.svg';
-import Dark from '@/icons/dark.svg';
-import Light from '@/icons/light.svg';
+import Resume from '@/icons/ui/resume.svg';
+import Lang from '@/icons/ui/lang.svg';
+import Dark from '@/icons/ui/dark.svg';
+import Light from '@/icons/ui/light.svg';
 import Link from 'next/link';
 
 export default function LockScreen() {

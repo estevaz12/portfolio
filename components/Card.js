@@ -4,11 +4,13 @@ import Date from './Date';
 export default function Card({ title, desc, date, page }) {
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
-      <header className='relative overflow-hidden h-52'>
+      <header className='relative overflow-hidden h-56'>
         <Image
           src={`/${page}/preview.png`}
           alt={`Preview of ${title} project`}
           fill={true}
+          sizes='(max-width: 1280px) 25rem'
+          priority={true}
           className='object-cover object-top'
         />
       </header>
@@ -24,3 +26,5 @@ export default function Card({ title, desc, date, page }) {
     </article>
   );
 }
+
+// TODO: add sizes prop to card image on different breakpoints

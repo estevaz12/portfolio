@@ -1,4 +1,4 @@
-import Close from '../icons/close.svg';
+import Close from '../icons/ui/close.svg';
 import Search from './Search';
 import Link from 'next/link';
 
