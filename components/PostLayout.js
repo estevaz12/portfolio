@@ -1,14 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Date from './Date';
 import { skills } from '@/lib/skills';
 import dynamic from 'next/dynamic';
+import Gallery from './Gallery';
 
 export default function PostLayout({
   title,
   date,
   headerImg,
   stack,
-  galleryImgs,
+  github,
+  gallery,
   children,
 }) {
   return (
@@ -35,17 +38,32 @@ export default function PostLayout({
 
           {children}
         </article>
-        <article className='flex-none w-fit h-fit sticky top-0'>
-          <h5 className='mb-2'>Stack</h5>
+        <article className='sticky top-0 flex-none w-fit h-fit'>
+          <h5 className='mb-2 text-[var(--h1-color)]'>Stack</h5>
           <ul className='mb-0'>
             {stack.map((skill) => (
-              <li key={skill} className='list-none mb-2 last:mb-0'>
-                {StackSvg(skill)}&nbsp;&nbsp;{skills[skill].name}
+              <li key={skill} className='mb-2 list-none last:mb-0'>
+                <small>
+                  {StackSvg(skill)}&nbsp;&nbsp;{skills[skill].name}
+                </small>
               </li>
             ))}
           </ul>
+
+          {github !== 'null' && (
+            <Link href={github} className='hover:no-underline' target='_blank'>
+              <button
+                type='button'
+                className='mt-4 mb-0 outline text-[var(--contrast-inverse)] border-[var(--secondary)] hover:text-[var(--primary)] hover:border-[var(--primary)] p-2'
+              >
+                <small>{StackSvg('github')}&nbsp;&nbsp;Open in GitHub</small>
+              </button>
+            </Link>
+          )}
         </article>
       </div>
+
+      <Gallery images={gallery} />
     </>
   );
 }

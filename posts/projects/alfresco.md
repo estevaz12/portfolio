@@ -3,6 +3,7 @@ title: 'Alfresco Extensions'
 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 date: '2022-09-01'
 stack: 'alfresco,java'
+github: 'null'
 ---
 
 - Worked on a proof-of-concept using Alfresco to develop an extension that would communicate with a third-party API to get or post data.
