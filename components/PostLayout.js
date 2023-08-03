@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Date from './Date';
 import { skills } from '@/lib/skills';
 import Gallery from './Gallery';
-import satori from 'satori';
 import Preview from './Preview';
 import StackSvg from './StackSvg';
 import path from 'path';
@@ -23,18 +22,19 @@ export default function PostLayout({
   return (
     <>
       <header className='flex items-center justify-center w-full h-1/2 mt-[var(--spacing)]'>
-        {fs.existsSync(imgPath) ? (
-          <Image
-            src={headerImg}
-            alt={`${title} preview`}
-            width={1200}
-            height={630}
-            priority={true}
-            className='w-auto h-full preview-shadow'
-          />
-        ) : (
-          <Preview stack={stack} />
-        )}
+        <div className='w-auto h-full aspect-video preview-shadow'>
+          {fs.existsSync(imgPath) ? (
+            <Image
+              src={headerImg}
+              alt={`${title} preview`}
+              width={1200}
+              height={630}
+              priority={true}
+            />
+          ) : (
+            <Preview stack={stack} />
+          )}
+        </div>
       </header>
 
       <div className='flex gap-2'>

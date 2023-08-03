@@ -5,10 +5,7 @@ export default function Preview({ stack }) {
   const totalOffset = stack.length - 1;
 
   return (
-    <div
-      style={{ width: 1200, height: 630 }}
-      className='flex items-center justify-center w-1/2 h-full bg-dark-blue preview-shadow'
-    >
+    <div className='flex items-center justify-center h-full bg-dark-blue'>
       {stack.map((skill, i) => (
         <div
           key={i}

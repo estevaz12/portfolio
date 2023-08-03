@@ -9,7 +9,7 @@ export default function Card({ title, desc, date, stack, page }) {
 
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
-      <header className='relative h-56 overflow-hidden'>
+      <header className='relative h-56 p-0 overflow-hidden'>
         {fs.existsSync(imgPath) ? (
           <Image
             src={`/${page}/preview.png`}
