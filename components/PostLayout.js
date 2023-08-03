@@ -2,8 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Date from './Date';
 import { skills } from '@/lib/skills';
-import dynamic from 'next/dynamic';
 import Gallery from './Gallery';
+import satori from 'satori';
+import Preview from './Preview';
+import StackSvg from './StackSvg';
+import path from 'path';
+import fs from 'fs';
 
 export default function PostLayout({
   title,
@@ -14,17 +18,23 @@ export default function PostLayout({
   gallery,
   children,
 }) {
+  const imgPath = path.join('public', headerImg);
+
   return (
     <>
       <header className='flex items-center justify-center w-full h-1/2 mt-[var(--spacing)]'>
-        <Image
-          src={headerImg}
-          alt={`${title} preview`}
-          width={1200}
-          height={675}
-          priority={true}
-          className='w-auto h-full preview-shadow'
-        />
+        {fs.existsSync(imgPath) ? (
+          <Image
+            src={headerImg}
+            alt={`${title} preview`}
+            width={1200}
+            height={630}
+            priority={true}
+            className='w-auto h-full preview-shadow'
+          />
+        ) : (
+          <Preview stack={stack} />
+        )}
       </header>
 
       <div className='flex gap-2'>
@@ -44,34 +54,30 @@ export default function PostLayout({
             {stack.map((skill) => (
               <li key={skill} className='mb-2 list-none last:mb-0'>
                 <small>
-                  {StackSvg(skill)}&nbsp;&nbsp;{skills[skill].name}
+                  <StackSvg skill={skill} />
+                  &nbsp;&nbsp;{skills[skill].name}
                 </small>
               </li>
             ))}
           </ul>
 
-          {/* {github !== 'null' && (
+          {github !== 'null' && (
             <Link href={github} className='hover:no-underline' target='_blank'>
               <button
                 type='button'
                 className='mt-4 mb-0 outline text-[var(--contrast-inverse)] border-[var(--secondary)] hover:text-[var(--primary)] hover:border-[var(--primary)] p-2'
               >
-                <small>{StackSvg('github')}&nbsp;&nbsp;Open in GitHub</small>
+                <small>
+                  <StackSvg skill='github' />
+                  &nbsp;&nbsp;Open in GitHub
+                </small>
               </button>
             </Link>
-          )} */}
+          )}
         </article>
       </div>
 
       <Gallery images={gallery} />
     </>
   );
-}
-
-function StackSvg(
-  skill,
-  className = 'w-[var(--font-size)] h-[var(--font-size)]'
-) {
-  const Svg = dynamic(() => import(`@/icons/skills/${skill}.svg`));
-  return <Svg className={className} />;
 }

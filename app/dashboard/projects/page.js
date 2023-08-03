@@ -20,6 +20,7 @@ export default function Projects() {
               title={post.title}
               desc={post.desc}
               date={post.date}
+              stack={post.stack.split(',').sort()}
               page={`projects/${post.id}`}
             />
           </Link>

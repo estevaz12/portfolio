@@ -1,18 +1,27 @@
 import Image from 'next/image';
 import Date from './Date';
+import path from 'path';
+import fs from 'fs';
+import Preview from './Preview';
 
-export default function Card({ title, desc, date, page }) {
+export default function Card({ title, desc, date, stack, page }) {
+  const imgPath = path.join('public', `/${page}/preview.png`);
+
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
-      <header className='relative overflow-hidden h-56'>
-        <Image
-          src={`/${page}/preview.png`}
-          alt={`Preview of ${title} project`}
-          fill={true}
-          sizes='(max-width: 1280px) 25rem'
-          priority={true}
-          className='object-cover object-top'
-        />
+      <header className='relative h-56 overflow-hidden'>
+        {fs.existsSync(imgPath) ? (
+          <Image
+            src={`/${page}/preview.png`}
+            alt={`Preview of ${title} project`}
+            fill={true}
+            sizes='(max-width: 1280px) 25rem'
+            priority={true}
+            className='object-cover object-top'
+          />
+        ) : (
+          <Preview stack={stack} />
+        )}
       </header>
       <hgroup className='m-0'>
         <h4>{title}</h4>

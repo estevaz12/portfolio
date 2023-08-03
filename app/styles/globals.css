@@ -42,8 +42,6 @@
   }
 
   .preview-shadow {
-    /* border: 1px solid var(--mid-blue);
-    box-shadow: 12px 16px 0px 0px var(--mid-blue); */
     box-shadow: 0px 0px 10px 3px var(--dark-blue),
       50px 0px 150px 0px var(--mid-blue), -50px 0px 150px 0px var(--mid-blue);
   }
@@ -73,8 +71,6 @@
   }
 
   .preview-shadow {
-    /* border: 1px solid var(--mid-blue);
-    box-shadow: 12px 16px 0px 0px var(--mid-blue); */
     box-shadow: 0px 0px 10px 3px var(--dark-blue),
       50px 0px 150px 0px var(--mid-blue), -50px 0px 150px 0px var(--mid-blue);
   }
