@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Gallery({ images }) {
   return (
-    <div className='grid grid-cols-3 gap-2'>
+    <div className='gap-2 space-y-2 columns-2'>
       {images.map((image) => (
         <Image
           key={image.id}
@@ -17,3 +17,5 @@ export default function Gallery({ images }) {
     </div>
   );
 }
+
+// consider using aspect-ratio for responsive images

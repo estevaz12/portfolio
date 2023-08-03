@@ -1,6 +1,6 @@
 import Sidebar from '@/components/Sidebar';
 
-export default function UnlockedLayout({ children }) {
+export default function DashboardLayout({ children }) {
   return (
     <div className='container-fluid h-screen py-[var(--block-spacing-vertical)]'>
       <main className='flex h-full max-w-screen-xl mx-auto my-0 shadow rounded-[var(--border-radius)] overflow-hidden'>

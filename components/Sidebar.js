@@ -18,7 +18,7 @@ export default function Sidebar() {
             {pages.map((page) => (
               <li key={page.name}>
                 <Link
-                  href={`/unlocked/${page.name.toLowerCase()}`}
+                  href={`/dashboard/${page.name.toLowerCase()}`}
                   className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
                 >
                   {page.icon} {page.name}

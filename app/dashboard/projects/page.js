@@ -13,7 +13,7 @@ export default function Projects() {
         {postsData.map((post) => (
           <Link
             key={post.id}
-            href={`/unlocked/projects/${post.id}`}
+            href={`/dashboard/projects/${post.id}`}
             className='hover:no-underline'
           >
             <Card
