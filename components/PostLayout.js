@@ -50,7 +50,7 @@ export default function PostLayout({
             ))}
           </ul>
 
-          {github !== 'null' && (
+          {/* {github !== 'null' && (
             <Link href={github} className='hover:no-underline' target='_blank'>
               <button
                 type='button'
@@ -59,7 +59,7 @@ export default function PostLayout({
                 <small>{StackSvg('github')}&nbsp;&nbsp;Open in GitHub</small>
               </button>
             </Link>
-          )}
+          )} */}
         </article>
       </div>
 
