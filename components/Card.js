@@ -13,24 +13,26 @@ export default function Card({ title, desc, date, stack, page }) {
         {fs.existsSync(imgPath) ? (
           <Image
             src={`/${page}/preview.png`}
-            alt={`Preview of ${title} project`}
+            alt={`Preview of ${title}`}
             fill={true}
             sizes='(max-width: 1280px) 25rem'
             priority={true}
-            className='object-cover object-top'
+            className='object-contain'
           />
         ) : (
           <Preview stack={stack} />
         )}
       </header>
       <hgroup className='m-0'>
-        <h4>{title}</h4>
-        <p className='m-0 line-clamp-2 text-[var(--contrast-inverse)]'>
-          {desc}
+        <h4 className='truncate'>{title}</h4>
+        <p className='m-0 line-clamp-4 text-[var(--contrast-inverse)]'>
+          <small>{desc}</small>
         </p>
-        <p className='m-0'>
-          <Date dateStr={date} />
-        </p>
+        {date.length !== 0 && (
+          <p className='m-0'>
+            <Date dateStr={date} />
+          </p>
+        )}
       </hgroup>
     </article>
   );

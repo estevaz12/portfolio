@@ -61,7 +61,7 @@ export default function PostLayout({
             ))}
           </ul>
 
-          {github !== 'null' && (
+          {github.length !== 0 && (
             <Link href={github} className='hover:no-underline' target='_blank'>
               <button
                 type='button'
@@ -69,7 +69,7 @@ export default function PostLayout({
               >
                 <small>
                   <StackSvg skill='github' className='w-4 h-4' />
-                  &nbsp;&nbsp;Open in GitHub
+                  &nbsp;&nbsp;View Source
                 </small>
               </button>
             </Link>

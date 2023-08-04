@@ -5,7 +5,7 @@ import Dev from '@/emojis/building_construction.svg';
 export default function Date({ dateStr }) {
   return (
     <small>
-      {dateStr === 'null' ? (
+      {dateStr === 'dev' ? (
         <>
           <Dev className='w-4 h-4' /> Developing
         </>

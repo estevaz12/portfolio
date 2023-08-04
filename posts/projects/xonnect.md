@@ -1,9 +1,9 @@
 ---
 title: 'Xonnect.io'
 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-date: 'null'
+date: 'dev'
 stack: 'camel,java,gcloudStore,gke'
-github: 'null'
+github: ''
 ---
 
 - Developing a backend application using Apache Camel and Java that serves as a generic API connector to fetch data from any API and upload it to a cloud storage bucket.

@@ -3,7 +3,7 @@ title: 'Browser Extension'
 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 date: '2022-08-01'
 stack: 'js'
-github: 'null'
+github: ''
 ---
 
 - Extended a cross-browser screenshot extension using JavaScript that enabled users to capture and upload screenshots to a client’s compliance database with one click.

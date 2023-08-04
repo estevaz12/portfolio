@@ -34,6 +34,7 @@
     --muted-border-color: hsla(35, 94%, 31%, 0.5);
     --form-element-background-color: var(--background-color);
     --form-element-border-color: var(--muted-border-color);
+    --card-sectionning-background-color: var(--dark-blue);
   }
 
   .active {
@@ -65,6 +66,7 @@
   --form-element-background-color: var(--background-color);
   --form-element-border-color: var(--muted-border-color);
   --color: var(--contrast-inverse);
+  --card-sectionning-background-color: var(--dark-blue);
 
   .active {
     background: var(--green);
