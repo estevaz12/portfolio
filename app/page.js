@@ -4,6 +4,10 @@ import Lang from '@/icons/ui/lang.svg';
 import Dark from '@/icons/ui/dark.svg';
 import Light from '@/icons/ui/light.svg';
 import Link from 'next/link';
+import Cross from '@/emojis/latin_cross.svg';
+import Ring from '@/emojis/ring.svg';
+import Desktop from '@/emojis/desktop_computer.svg';
+import Check from '@/emojis/check_mark_button.svg';
 
 export default function LockScreen() {
   return (
@@ -23,10 +27,16 @@ export default function LockScreen() {
               Esteban Vazquez Cardona
             </h1>
             <h4 className='text-white drop-shadow-sm'>
-              Disciple ✝️ Husband 💍 Developer 🖥️
+              Disciple{' '}
+              <Cross className='w-[var(--font-size)] h-[var(--font-size)]' />{' '}
+              Husband{' '}
+              <Ring className='w-[var(--font-size)] h-[var(--font-size)]' />{' '}
+              Developer{' '}
+              <Desktop className='w-[var(--font-size)] h-[var(--font-size)]' />
             </h4>
             <p className='text-white drop-shadow-sm'>
-              ✅ Currently looking for contract work
+              <Check className='w-[var(--font-size)] h-[var(--font-size)]' />{' '}
+              Currently looking for contract work
             </p>
           </div>
         </div>

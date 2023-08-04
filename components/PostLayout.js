@@ -22,7 +22,7 @@ export default function PostLayout({
   return (
     <>
       <header className='flex items-center justify-center w-full h-1/2 mt-[var(--spacing)]'>
-        <div className='w-auto h-full aspect-video preview-shadow'>
+        <div className='w-auto h-full aspect-video preview-shadow rounded-[var(--border-radius)] overflow-hidden'>
           {fs.existsSync(imgPath) ? (
             <Image
               src={headerImg}
@@ -68,7 +68,7 @@ export default function PostLayout({
                 className='mt-4 mb-0 outline text-[var(--contrast-inverse)] border-[var(--secondary)] hover:text-[var(--primary)] hover:border-[var(--primary)] p-2'
               >
                 <small>
-                  <StackSvg skill='github' />
+                  <StackSvg skill='github' className='w-4 h-4' />
                   &nbsp;&nbsp;Open in GitHub
                 </small>
               </button>

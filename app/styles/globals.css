@@ -64,6 +64,7 @@
   --muted-border-color: hsla(35, 94%, 31%, 0.5);
   --form-element-background-color: var(--background-color);
   --form-element-border-color: var(--muted-border-color);
+  --color: var(--contrast-inverse);
 
   .active {
     background: var(--green);
@@ -93,6 +94,7 @@
   --gr-width-half: calc(var(--gr-width) / 2);
   --gr-height: calc(100% / var(--gr));
   --grid-spacing-vertical: 1rem;
+  --color: var(--contrast-inverse);
 }
 
 h1,
@@ -102,6 +104,7 @@ h4,
 h5,
 h6 {
   font-family: var(--grotesk) !important;
+  color: var(--h1-color);
 }
 
 svg {

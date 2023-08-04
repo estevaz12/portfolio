@@ -11,11 +11,11 @@ export default function Gallery({ images }) {
           width={1440}
           height={900}
           loading='lazy'
-          className='w-full h-auto'
+          className='w-full h-auto rounded-[var(--border-radius)]'
         />
       ))}
     </div>
   );
 }
 
-// consider using aspect-ratio for responsive images
+// TODO: consider using aspect-ratio for responsive images
