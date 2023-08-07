@@ -98,7 +98,7 @@ export default function PostLayout({
         )}
       </div>
 
-      <Gallery images={gallery} />
+      {gallery.length !== 0 && <Gallery images={gallery} />}
     </>
   );
 }
