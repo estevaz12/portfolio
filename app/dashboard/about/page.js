@@ -1,5 +1,5 @@
-import PostPageLayout from '@/components/PostPageLayout';
+import PostsPageLayout from '@/components/PostsPageLayout';
 
 export default function About() {
-  return <PostPageLayout page='about' isSearchEnabled={false} />;
+  return <PostsPageLayout page='about' isSearchEnabled={false} />;
 }

@@ -1,9 +1,9 @@
-import Card from '@/components/Card';
 import Header from '@/components/Header';
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
+import PostCard from '@/components/PostCard';
 
-export default function PostPageLayout({ page, isSearchEnabled }) {
+export default function PostsPageLayout({ page, isSearchEnabled }) {
   const postsData = getSortedPostsData(page);
 
   return (
@@ -19,12 +19,13 @@ export default function PostPageLayout({ page, isSearchEnabled }) {
             href={`/dashboard/${page}/${post.id}`}
             className='hover:no-underline'
           >
-            <Card
+            <PostCard
               title={post.title}
               desc={post.desc}
               date={post.date}
+              page={page}
+              post={post.id}
               stack={post.stack.split(',').sort()}
-              page={`${page}/${post.id}`}
             />
           </Link>
         ))}
