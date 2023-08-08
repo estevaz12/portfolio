@@ -9,6 +9,7 @@ export default function SkillCard({ skill }) {
         <h4 className='m-0'>{skill.name}</h4>
       </div>
 
+      {/* TODO: link to projects page filtered by the skill */}
       <Link
         href='#'
         className='focus:bg-transparent focus:text-[var(--primary)] focus:no-underline hover:bg-transparent hover:text-[var(--primary)] hover:no-underline'
@@ -16,7 +17,9 @@ export default function SkillCard({ skill }) {
         <span className='inline-block w-6 h-6 text-center text-white rounded-full bg-mid-blue'>
           {skill.projects}
         </span>{' '}
-        <span className='focus:underline hover:underline'>Projects</span>
+        <span className='focus:underline hover:underline'>
+          {skill.projects === 1 ? 'Project' : 'Projects'}
+        </span>
       </Link>
     </article>
   );
