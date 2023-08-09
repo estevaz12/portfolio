@@ -19,8 +19,8 @@ export async function POST(request) {
     let info = await transporter.sendMail({
       from: `"Contact Form" ${process.env.GMAIL_USER}`,
       to: process.env.GMAIL_USER,
-      subject: 'New Contact Form Submission',
-      text: `Name: ${firstName} ${lastName}\n\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: 'Portfolio Contact Form',
+      text: `Name: ${firstName} ${lastName}\n\nEmail: ${email}\n\nMessage:\n\n${message}`,
     });
 
     return NextResponse.json({ status: 'success', message: 'Sent' });

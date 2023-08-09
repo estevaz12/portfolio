@@ -7,6 +7,7 @@ import Preview from './Preview';
 import StackSvg from './StackSvg';
 import path from 'path';
 import fs from 'fs';
+import Github from '@/icons/ui/github.svg';
 
 export default function PostLayout({
   title,
@@ -88,7 +89,7 @@ export default function PostLayout({
                   className='mt-4 mb-0 outline text-[var(--contrast-inverse)] border-[var(--secondary)] hover:text-[var(--primary)] hover:border-[var(--primary)] p-2'
                 >
                   <small>
-                    <StackSvg skill='github' className='w-4 h-4' />
+                    <Github className='w-4 h-4' />
                     &nbsp;&nbsp;View Source
                   </small>
                 </button>

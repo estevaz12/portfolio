@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Success from '@/icons/ui/send-success.svg';
+import Failed from '@/icons/ui/send-fail.svg';
 
 export default function ContactForm() {
   // init = 0, success = 200, error = 500
@@ -28,7 +30,9 @@ export default function ContactForm() {
   return (
     <>
       <header className='text-center bg-[var(--primary-hover)]'>
-        <h4 className='m-0'>Send me an email</h4>
+        <p className='m-0'>
+          <b>Send me an email</b>
+        </p>
       </header>
 
       {(() => {
@@ -36,10 +40,11 @@ export default function ContactForm() {
           case 0:
             return (
               <>
-                <div className='spacer'>
+                <div className='mb-4'>
                   <small>
-                    <em className='muted'>
-                      <span className='error'>*</span> {t.required}
+                    <em className='text-muted'>
+                      <span className='text-light-blue'>*</span> All fields
+                      required
                     </em>
                   </small>
                 </div>
@@ -98,7 +103,10 @@ export default function ContactForm() {
                       Send
                     </button>
                   ) : (
-                    <button className='mb-0 bg-[var(--primary-hover)] text-white border-[var(--primary-hover)]'>
+                    <button
+                      className='mb-0 bg-[var(--primary-hover)] text-white border-[var(--primary-hover)]'
+                      aria-busy='true'
+                    >
                       Sending...
                     </button>
                   )}
@@ -108,9 +116,9 @@ export default function ContactForm() {
 
           case 200:
             return (
-              <div className=''>
-                <Check width='5rem' height='5rem' />
-                <h1>Message sent</h1>
+              <div className='text-center'>
+                <Success width='5rem' height='5rem' className='mb-4' />
+                <h2>Message sent</h2>
                 Thank you for reaching out!
               </div>
             );
@@ -118,9 +126,9 @@ export default function ContactForm() {
           default:
             // status === error
             return (
-              <div className=''>
-                <Failed width='5rem' height='5rem' />
-                <h1>Failed to send message</h1>
+              <div className='text-center'>
+                <Failed width='5rem' height='5rem' className='mb-4' />
+                <h2>Failed to send message</h2>
                 Please try again later.
               </div>
             );

@@ -47,4 +47,4 @@ export default function PostCard({ title, desc, date, page, post, stack }) {
   );
 }
 
-// TODO: add sizes prop to card image on different breakpoints
+// TODO: add sizes prop to images with fill=true on different breakpoints

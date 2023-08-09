@@ -18,5 +18,3 @@ export default function Preview({ stack }) {
     </div>
   );
 }
-
-// TODO: adjust text color

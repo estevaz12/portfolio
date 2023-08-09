@@ -42,6 +42,16 @@ export default function RootLayout({ children }) {
   );
 }
 
+// TODO: search by skill
+// TODO: clicking skill
+// TODO: add resume link
+// TODO: add courses
+// TODO: initial page
+// TODO: loading state
+// TODO: make responsive
+// TODO: light theme
 // TODO: seo
 // TODO: analytics
-// TODO: i18n
+// TODO: i18n?
+// TODO: add content to posts
+// TODO: images in posts
