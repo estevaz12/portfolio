@@ -27,6 +27,20 @@ module.exports = {
         black: '#000',
         muted: 'hsl(35, 94%, 31%)',
       },
+      keyframes: {
+        fade: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        'fade-in': 'fade 1s ease-in-out 1',
+        'fade-out': 'fade 1s ease-in-out 1 reverse',
+      },
     },
   },
   plugins: [],

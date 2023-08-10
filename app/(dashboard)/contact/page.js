@@ -10,13 +10,13 @@ export default function Contact() {
   return (
     <>
       <Header title={'Contact'} isSearchEnabled={false} />
-      <div className='flex gap-4'>
-        <article className='m-0 flex-auto'>
+      <div className='flex gap-4 animate-fade-in'>
+        <article className='flex-auto m-0'>
           <ContactForm />
         </article>
 
-        <div className='flex flex-none flex-col gap-4 sticky top-0 h-fit'>
-          <Link
+        <div className='sticky top-0 flex flex-col flex-none gap-4 h-fit'>
+          {/* <Link
             href='#'
             role='button'
             className='flex items-center gap-2 m-0 bg-coffee outline'
@@ -25,7 +25,7 @@ export default function Contact() {
             <h3 className='mb-0 text-[var(--primary)] hover:text-[var(--primary-hover)]'>
               Upwork
             </h3>
-          </Link>
+          </Link> */}
           <Link
             href='https://www.linkedin.com/in/esteban-vc/'
             role='button'

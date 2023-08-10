@@ -3,7 +3,7 @@ import Sidebar from '@/components/Sidebar';
 export default function DashboardLayout({ children }) {
   return (
     <div className='container-fluid h-screen py-[var(--block-spacing-vertical)]'>
-      <main className='flex h-full max-w-screen-xl mx-auto my-0 shadow rounded-[var(--border-radius)] overflow-hidden'>
+      <main className='flex h-full max-w-screen-xl mx-auto my-0 shadow rounded-[var(--border-radius)] overflow-hidden animate-fade-in'>
         <div className='h-full overflow-hidden basis-1/6 bg-coffee/80 backdrop-blur'>
           <Sidebar />
         </div>

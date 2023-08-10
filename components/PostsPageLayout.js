@@ -12,11 +12,11 @@ export default function PostsPageLayout({ page, isSearchEnabled }) {
         title={page.charAt(0).toUpperCase() + page.slice(1)}
         isSearchEnabled={isSearchEnabled}
       />
-      <div className='grid grid-cols-3'>
+      <div className='grid grid-cols-3 animate-fade-in'>
         {postsData.map((post) => (
           <Link
             key={post.id}
-            href={`/dashboard/${page}/${post.id}`}
+            href={`/${page}/${post.id}`}
             className='hover:no-underline'
           >
             <PostCard

@@ -11,7 +11,7 @@ import Check from '@/emojis/check_mark_button.svg';
 
 export default function LockScreen() {
   return (
-    <div className='flex items-end justify-center w-screen h-screen'>
+    <div className='flex items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1]'>
       <div className='flex flex-col items-center justify-around h-2/3'>
         <div className='flex gap-4'>
           <Image
@@ -24,7 +24,7 @@ export default function LockScreen() {
           />
           <div className='space-y-0'>
             <h1 className='m-0 text-white drop-shadow-sm'>
-              Esteban Vazquez Cardona
+              Esteban Vázquez Cardona
             </h1>
             <h4 className='text-white drop-shadow-sm'>
               Disciple{' '}
@@ -36,27 +36,37 @@ export default function LockScreen() {
             </h4>
             <p className='text-white drop-shadow-sm'>
               <Check className='w-[var(--font-size)] h-[var(--font-size)]' />{' '}
-              Currently looking for contract work
+              Currently looking for work
             </p>
           </div>
         </div>
-        <div className='text-center text-white'>
-          <small className='drop-shadow-sm animate-pulse'>
-            Click or tap to unlock
-          </small>
-        </div>
+
         <div className='text-center'>
-          <Option href='#' name='Resume'>
-            <Resume width='0.875em' height='0.875em' />
+          <Link
+            href='/projects'
+            className='text-white hover:no-underline focus:no-underline focus:bg-transparent'
+          >
+            <small className='drop-shadow-sm animate-pulse'>
+              Click or tap here to unlock
+            </small>
+          </Link>
+        </div>
+
+        <div className='text-center'>
+          <Option
+            href='https://public.ph.files.1drv.com/y4m6zTWSNyy7dNPyvqby3GBc45OBdC_dbrXh5S2fus6GXZ_LaV9rWjzda0iOKFv5YVeCpiOWtqdcsys2yPrLbZwSME2mtmE_RiHuv4QOeQlLG22dOIYOEUaZdcqymuvO2wVZUPHlD5C6GeAzczY8oMbo339bQG1J6iUk2wlMdHgyhpj3F-poP6oUcg1hUZ2qn1j0M3IPcWAqbcRm7hyTp5Rp_f-lUaQORfIAa0C9LJVR-Y?AVOverride=1'
+            name='Resume'
+          >
+            <Resume className='w-[var(--font-size)] h-[var(--font-size)]' />
           </Option>
-          &emsp;
+          {/* &emsp;
           <Option href='#' name='Theme'>
-            <Dark width='0.875em' height='0.875em' />
+            <Dark className='w-[var(--font-size)] h-[var(--font-size)]' />
           </Option>
           &emsp;
           <Option href='#' name='Español'>
-            <Lang width='0.875em' height='0.875em' />
-          </Option>
+            <Lang className='w-[var(--font-size)] h-[var(--font-size)]' />
+          </Option> */}
         </div>
       </div>
     </div>
@@ -65,7 +75,10 @@ export default function LockScreen() {
 
 function Option({ href, children, name }) {
   return (
-    <Link href={href} className='text-white/70 hover:no-underline'>
+    <Link
+      href={href}
+      className='flex items-center text-white/70 hover:no-underline focus:bg-transparent'
+    >
       <small className='drop-shadow-sm hover:text-white/100'>
         {children} {name}
       </small>

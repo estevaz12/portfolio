@@ -42,16 +42,24 @@ export default function RootLayout({ children }) {
   );
 }
 
-// TODO: search by skill
-// TODO: clicking skill
-// TODO: add resume link
-// TODO: add courses
-// TODO: initial page
-// TODO: loading state
+// MVP
+// TODO: add number of courses to skill
+// TODO: maybe change border radius
 // TODO: make responsive
+// TODO: bare SEO
+// TODO: basic analytics
+// TODO: add content to posts
+// TODO: college experience as well
+
+// for later
+// TODO: fade out animation with FramerMotion
+// TODO: search by skill
+// TODO: loading skeleton
+// TODO: clicking skill to see projects
+// TODO: add courses
 // TODO: light theme
 // TODO: seo
 // TODO: analytics
 // TODO: i18n?
-// TODO: add content to posts
 // TODO: images in posts
+// TODO: animations

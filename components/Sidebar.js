@@ -18,7 +18,7 @@ export default function Sidebar() {
             {pages.map((page) => (
               <li key={page.name}>
                 <Link
-                  href={`/dashboard/${page.name.toLowerCase()}`}
+                  href={`/${page.name.toLowerCase()}`}
                   className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
                 >
                   {page.icon} {page.name}
@@ -55,7 +55,7 @@ export default function Sidebar() {
               <li key={option.name}>
                 <Link
                   href={option.href}
-                  className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
+                  className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4 focus:bg-transparent'
                 >
                   <small>
                     {option.icon} {option.name}
@@ -112,17 +112,17 @@ const pages = [
 const options = [
   {
     name: 'Resume',
-    href: '#',
+    href: 'https://public.ph.files.1drv.com/y4m6zTWSNyy7dNPyvqby3GBc45OBdC_dbrXh5S2fus6GXZ_LaV9rWjzda0iOKFv5YVeCpiOWtqdcsys2yPrLbZwSME2mtmE_RiHuv4QOeQlLG22dOIYOEUaZdcqymuvO2wVZUPHlD5C6GeAzczY8oMbo339bQG1J6iUk2wlMdHgyhpj3F-poP6oUcg1hUZ2qn1j0M3IPcWAqbcRm7hyTp5Rp_f-lUaQORfIAa0C9LJVR-Y?AVOverride=1',
     icon: <Resume color='#E2124D' width='0.875em' height='0.875em' />,
   },
-  {
-    name: 'Theme',
-    href: '#',
-    icon: <Dark color='#FFB10A' width='0.875em' height='0.875em' />,
-  },
-  {
-    name: 'Español',
-    href: '#',
-    icon: <Lang color='#54DEFD' width='0.875em' height='0.875em' />,
-  },
+  // {
+  //   name: 'Theme',
+  //   href: '#',
+  //   icon: <Dark color='#FFB10A' width='0.875em' height='0.875em' />,
+  // },
+  // {
+  //   name: 'Español',
+  //   href: '#',
+  //   icon: <Lang color='#54DEFD' width='0.875em' height='0.875em' />,
+  // },
 ];
