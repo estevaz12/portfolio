@@ -20,7 +20,7 @@ export default function PostLayout({
   children,
 }) {
   const bgPath = path.join('public', page, `preview-bg.png`);
-  const imgPath = path.join('public', headerImg);
+  // const imgPath = path.join('public', headerImg);
 
   return (
     <>
