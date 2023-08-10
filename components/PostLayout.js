@@ -20,7 +20,7 @@ export default function PostLayout({
   children,
 }) {
   const bgPath = path.join('public', page, `preview-bg.png`);
-  const imgPath = path.join(headerImg);
+  // const imgPath = path.join(headerImg);
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function PostLayout({
               className='object-cover'
             />
           )}
-          {fs.existsSync(imgPath) ? (
+          {fs.existsSync(headerImg) ? (
             <Image
               src={headerImg}
               alt={`${title} preview`}
