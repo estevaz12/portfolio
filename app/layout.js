@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
 // TODO: add number of courses to skill
 // TODO: maybe change border radius
 // TODO: make responsive
+// TODO: figure out production img issue
 // TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts
