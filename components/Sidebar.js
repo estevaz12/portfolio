@@ -56,6 +56,7 @@ export default function Sidebar() {
                 <Link
                   href={option.href}
                   className='text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4 focus:bg-transparent'
+                  target='_blank'
                 >
                   <small>
                     {option.icon} {option.name}
@@ -112,7 +113,7 @@ const pages = [
 const options = [
   {
     name: 'Resume',
-    href: 'https://public.ph.files.1drv.com/y4m6zTWSNyy7dNPyvqby3GBc45OBdC_dbrXh5S2fus6GXZ_LaV9rWjzda0iOKFv5YVeCpiOWtqdcsys2yPrLbZwSME2mtmE_RiHuv4QOeQlLG22dOIYOEUaZdcqymuvO2wVZUPHlD5C6GeAzczY8oMbo339bQG1J6iUk2wlMdHgyhpj3F-poP6oUcg1hUZ2qn1j0M3IPcWAqbcRm7hyTp5Rp_f-lUaQORfIAa0C9LJVR-Y?AVOverride=1',
+    href: 'https://1drv.ms/b/s!AumjDqvvmORqjYoaDPoBWBjPo294Og?e=06Rhd5',
     icon: <Resume color='#E2124D' width='0.875em' height='0.875em' />,
   },
   // {

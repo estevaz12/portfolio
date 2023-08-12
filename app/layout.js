@@ -43,10 +43,8 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: add number of courses to skill
-// TODO: maybe change border radius
 // TODO: make responsive
-// TODO: figure out production img issue
+// TODO: figure out production img issue (fs.existsSync)
 // TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts

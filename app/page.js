@@ -54,7 +54,7 @@ export default function LockScreen() {
 
         <div className='text-center'>
           <Option
-            href='https://public.ph.files.1drv.com/y4m6zTWSNyy7dNPyvqby3GBc45OBdC_dbrXh5S2fus6GXZ_LaV9rWjzda0iOKFv5YVeCpiOWtqdcsys2yPrLbZwSME2mtmE_RiHuv4QOeQlLG22dOIYOEUaZdcqymuvO2wVZUPHlD5C6GeAzczY8oMbo339bQG1J6iUk2wlMdHgyhpj3F-poP6oUcg1hUZ2qn1j0M3IPcWAqbcRm7hyTp5Rp_f-lUaQORfIAa0C9LJVR-Y?AVOverride=1'
+            href='https://1drv.ms/b/s!AumjDqvvmORqjYoaDPoBWBjPo294Og?e=06Rhd5'
             name='Resume'
           >
             <Resume className='w-[var(--font-size)] h-[var(--font-size)]' />
@@ -78,6 +78,7 @@ function Option({ href, children, name }) {
     <Link
       href={href}
       className='flex items-center text-white/70 hover:no-underline focus:bg-transparent'
+      target='_blank'
     >
       <small className='drop-shadow-sm hover:text-white/100'>
         {children} {name}

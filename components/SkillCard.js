@@ -10,17 +10,23 @@ export default function SkillCard({ skill }) {
       </div>
 
       {/* TODO: link to projects page filtered by the skill */}
-      <Link
-        href='#'
-        className='focus:bg-transparent focus:text-[var(--primary)] focus:no-underline hover:bg-transparent hover:text-[var(--primary)] hover:no-underline'
-      >
-        <span className='inline-block w-6 h-6 text-center text-white rounded-full bg-mid-blue'>
-          {skill.projects}
-        </span>{' '}
-        <span className='focus:underline hover:underline'>
-          {skill.projects === 1 ? 'Project' : 'Projects'}
-        </span>
-      </Link>
+      <div className='flex justify-between'>
+        <div>
+          <span className='inline-block w-6 h-6 text-center text-white rounded-full bg-mid-blue'>
+            {skill.projects}
+          </span>{' '}
+          <span>{skill.projects === 1 ? 'Project' : 'Projects'}</span>
+        </div>
+
+        {skill.courses > 0 && (
+          <div>
+            <span className='inline-block w-6 h-6 text-center rounded-full bg-green text-coffee'>
+              {skill.courses}
+            </span>{' '}
+            <span>{skill.courses === 1 ? 'Course' : 'Courses'}</span>
+          </div>
+        )}
+      </div>
     </article>
   );
 }
