@@ -11,9 +11,9 @@ import Check from '@/emojis/check_mark_button.svg';
 
 export default function LockScreen() {
   return (
-    <div className='flex items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1]'>
+    <div className='flex items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1] container-fluid'>
       <div className='flex flex-col items-center justify-around h-2/3'>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 max-sm:flex-col max-sm:items-center'>
           <Image
             src='/profile-pic.JPG'
             alt='Picture of Esteban'
@@ -22,8 +22,8 @@ export default function LockScreen() {
             priority={true}
             className='rounded-full shadow w-28 h-28'
           />
-          <div className='space-y-0'>
-            <h1 className='m-0 text-white drop-shadow-sm'>
+          <div className='space-y-0 max-sm:text-center'>
+            <h1 className='m-0 text-white drop-shadow-sm max-sm:text-2xl'>
               Esteban Vázquez Cardona
             </h1>
             <h4 className='text-white drop-shadow-sm'>
@@ -43,7 +43,7 @@ export default function LockScreen() {
 
         <div className='text-center'>
           <Link
-            href='/projects'
+            href='/projects#menu'
             className='text-white hover:no-underline focus:no-underline focus:bg-transparent'
           >
             <small className='drop-shadow-sm animate-pulse'>

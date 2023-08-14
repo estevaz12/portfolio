@@ -1,5 +1,11 @@
+import Header from '@/components/Header';
 import PostsPageLayout from '@/components/PostsPageLayout';
 
 export default function About() {
-  return <PostsPageLayout page='projects' isSearchEnabled={true} />;
+  return (
+    <>
+      <Header title='Projects' isSearchEnabled={true} />
+      <PostsPageLayout page='projects' />
+    </>
+  );
 }

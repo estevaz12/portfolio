@@ -1,18 +1,13 @@
-import Header from '@/components/Header';
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
 import PostCard from '@/components/PostCard';
 
-export default function PostsPageLayout({ page, isSearchEnabled }) {
+export default function PostsPageLayout({ page }) {
   const postsData = getSortedPostsData(page);
 
   return (
     <>
-      <Header
-        title={page.charAt(0).toUpperCase() + page.slice(1)}
-        isSearchEnabled={isSearchEnabled}
-      />
-      <div className='grid grid-cols-3 animate-fade-in'>
+      <div className='grid sm:grid-cols-2 lg:grid-cols-3 animate-fade-in'>
         {postsData.map((post) => (
           <Link
             key={post.id}

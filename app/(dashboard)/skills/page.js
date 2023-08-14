@@ -9,7 +9,7 @@ export default function Skills() {
     <>
       <Header title={'Skills'} isSearchEnabled={true} />
 
-      <div className='grid grid-cols-3 gap-2 animate-fade-in'>
+      <div className='grid gap-2 sm:grid-cols-2 md:grid-cols-3 animate-fade-in'>
         {skills.map((skill) => (
           <SkillCard key={skill.id} skill={skill} />
         ))}

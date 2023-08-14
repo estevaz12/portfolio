@@ -9,7 +9,7 @@ import Lang from '../icons/ui/lang.svg';
 import Dark from '../icons/ui/dark.svg';
 import Light from '../icons/ui/light.svg';
 
-export default function Sidebar() {
+export default function Menu() {
   return (
     <aside className='h-full'>
       <nav className='flex flex-col justify-between h-full py-2'>

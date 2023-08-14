@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
     <html
       lang='en'
       data-theme='dark'
-      className={`${inter.variable} ${grotesk.variable}`}
+      className={`${inter.variable} ${grotesk.variable} scroll-smooth`}
     >
       <body>
         <Background />
