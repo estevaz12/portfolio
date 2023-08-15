@@ -30,6 +30,7 @@ export default function Contact() {
             href='https://www.linkedin.com/in/esteban-vc/'
             role='button'
             className='flex items-center gap-2 m-0 max-sm:justify-center bg-coffee outline'
+            target='_blank'
           >
             <Image
               src='/linkedin.png'
@@ -46,6 +47,7 @@ export default function Contact() {
             href='https://github.com/estevaz12'
             role='button'
             className='flex items-center gap-2 m-0 max-sm:justify-center bg-coffee outline'
+            target='_blank'
           >
             <Github className='w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10' />
             <h3 className='mb-0 text-[var(--primary)] hover:text-[var(--primary-hover)]'>

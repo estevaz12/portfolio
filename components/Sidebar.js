@@ -18,7 +18,7 @@ export default function Sidebar() {
             {pages.map((page) => (
               <li key={page.name}>
                 <Link
-                  href={`/${page.name.toLowerCase()}#content`}
+                  href={`/${page.name.toLowerCase()}`}
                   className='flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
                 >
                   {page.icon}

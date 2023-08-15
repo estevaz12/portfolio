@@ -11,7 +11,7 @@ export default function PostsPageLayout({ page }) {
         {postsData.map((post) => (
           <Link
             key={post.id}
-            href={`/${page}/${post.id}`}
+            href={`/${page}/${post.id}/#content`}
             className='hover:no-underline'
           >
             <PostCard

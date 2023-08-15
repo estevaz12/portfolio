@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Gallery({ images }) {
   return (
-    <div className='gap-2 space-y-2 columns-2'>
+    <div className='gap-2 space-y-4 sm:space-y-2 sm:columns-2 animate-fade-in'>
       {images.map((image) => (
         <Image
           key={image.id}

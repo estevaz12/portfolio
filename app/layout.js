@@ -43,7 +43,6 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: make responsive
 // TODO: figure out production img issue (fs.existsSync)
 // TODO: bare SEO
 // TODO: basic analytics

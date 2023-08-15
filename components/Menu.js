@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Projects from '../icons/ui/projects.svg';
 import Skills from '../icons/ui/skills.svg';
@@ -8,67 +9,89 @@ import Resume from '../icons/ui/resume.svg';
 import Lang from '../icons/ui/lang.svg';
 import Dark from '../icons/ui/dark.svg';
 import Light from '../icons/ui/light.svg';
+import Close from '@/icons/ui/close.svg';
 
 export default function Menu() {
   return (
-    <aside className='h-full'>
-      <nav className='flex flex-col justify-between h-full py-2'>
-        <div>
-          <ul className='mx-0'>
-            {pages.map((page) => (
-              <li key={page.name}>
-                <Link
-                  href={`/${page.name.toLowerCase()}#content`}
-                  className='flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
-                >
-                  {page.icon}
-                  {page.name}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <hr />
-            </li>
-            <li>
-              <Link
-                href='http://disciplestoday.org/'
-                target='_blank'
-                className='flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4'
-              >
-                Church&nbsp;&nbsp;
-                {
-                  <OutLink
-                    color='#54DEFD'
-                    className='w-[var(--font-size)] h-[var(--font-size)]'
-                  />
-                }
-              </Link>
-            </li>
-          </ul>
+    <div className='h-full container py-[var(--spacing)] flex flex-col gap-4'>
+      <div className='flex items-center justify-between w-full'>
+        <div className='flex gap-4'>
+          <Image
+            src='/profile-pic.JPG'
+            alt='Picture of Esteban'
+            width={50}
+            height={50}
+            priority={true}
+            className='rounded-full'
+          />
+          <h1 className='m-0'>Menu</h1>
         </div>
 
-        <div>
-          <ul className='mx-0'>
-            <li>
-              <hr />
-            </li>
-            {options.map((option) => (
-              <li key={option.name}>
-                <Link
-                  href={option.href}
-                  className='flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none pl-4 focus:bg-transparent'
-                  target='_blank'
+        <Link href='/'>
+          <Close color='#a2afb9' className='w-5 h-5' />
+        </Link>
+      </div>
+
+      <aside>
+        <nav className='flex flex-col h-full gap-4'>
+          <article className='overflow-hidden m-0 bg-muted/25 p-0'>
+            <ul className='mx-0 divide-y'>
+              {pages.map((page) => (
+                <li
+                  key={page.name}
+                  className='border-[var(--muted-border-color)] hover:border-[var(--primary-hover)] focus:border-[var(--primary-focus)]'
                 >
-                  <small>
-                    {option.icon} {option.name}
-                  </small>
+                  <Link
+                    href={`/${page.name.toLowerCase()}#content`}
+                    className='p-4 flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none'
+                  >
+                    {page.icon}
+                    {page.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className='overflow-hidden m-0 bg-muted/25 p-0'>
+            <ul className='mx-0'>
+              <li>
+                <Link
+                  href='http://disciplestoday.org/'
+                  target='_blank'
+                  className='p-4 flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none'
+                >
+                  Church&nbsp;&nbsp;
+                  {
+                    <OutLink
+                      color='#54DEFD'
+                      className='w-[var(--font-size)] h-[var(--font-size)]'
+                    />
+                  }
                 </Link>
               </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-    </aside>
+            </ul>
+          </article>
+
+          <article className='overflow-hidden m-0 bg-muted/25 p-0'>
+            <ul className='mx-0'>
+              {options.map((option) => (
+                <li key={option.name}>
+                  <Link
+                    href={option.href}
+                    className='p-4 flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none focus:bg-transparent'
+                    target='_blank'
+                  >
+                    {option.icon}
+                    {option.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </nav>
+      </aside>
+    </div>
   );
 }
 

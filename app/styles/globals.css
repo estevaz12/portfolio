@@ -109,18 +109,3 @@ h6 {
 svg {
   display: unset;
 }
-
-.full-width {
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  max-width: 100vw;
-  position: relative;
-  right: 50%;
-  width: 100vw;
-  overflow: hidden;
-}
-
-/* .golden-ratio {
-  padding-bottom: 61.8%;
-} */
