@@ -24,7 +24,7 @@ export default function PostCard({ title, desc, date, page, post, stack }) {
           if (fs.existsSync(imgPath)) {
             return (
               <Image
-                src={headerImg}
+                src={`/${page}/${post}/preview.png`}
                 alt={`${title} preview`}
                 fill={true}
                 priority={true}
