@@ -52,6 +52,7 @@ export default function PostLayout({
                 />
               );
             } else if (stack.length !== 0) {
+              console.log(stack, stack.length);
               return <Preview stack={stack} />;
             }
           })()}
