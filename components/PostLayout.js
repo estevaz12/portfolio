@@ -7,7 +7,7 @@ import Preview from './Preview';
 import StackSvg from './StackSvg';
 import Github from '@/icons/ui/github.svg';
 import MobilePostNav from './MobilePostNav';
-import { getPostImages } from '@/lib/posts';
+import PostHeader from './PostHeader';
 
 export default async function PostLayout({
   page,
@@ -19,8 +19,6 @@ export default async function PostLayout({
   gallery,
   children,
 }) {
-  const isImgAvailable = await getPostImages(page, post);
-
   return (
     <>
       <div className='sm:hidden animate-fade-in'>
@@ -29,30 +27,7 @@ export default async function PostLayout({
 
       <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] mb-8 animate-fade-in'>
         <div className='w-full sm:w-auto h-auto sm:h-full aspect-video preview-shadow rounded-[var(--border-radius)] relative overflow-hidden -z-10'>
-          {isImgAvailable.bg && (
-            <Image
-              src={`/${page}/preview-bg.png`}
-              alt={`Background`}
-              fill={true}
-              className='object-cover'
-            />
-          )}
-
-          {(() => {
-            if (isImgAvailable.preview) {
-              return (
-                <Image
-                  src={`/${page}/${post}/preview.png`}
-                  alt={`${title} preview`}
-                  fill={true}
-                  priority={true}
-                  className='object-contain'
-                />
-              );
-            } else if (stack[0].length !== 0) {
-              return <Preview stack={stack} />;
-            }
-          })()}
+          <PostHeader page={page} post={post} title={title} stack={stack} />
         </div>
       </header>
 

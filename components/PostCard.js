@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Date from './Date';
-import Preview from './Preview';
-import { getPostImages } from '@/lib/posts';
+import PostHeader from './PostHeader';
 
 export default async function PostCard({
   page,
@@ -11,35 +9,10 @@ export default async function PostCard({
   date,
   stack,
 }) {
-  const isImgAvailable = await getPostImages(page, post);
-
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
       <header className='relative h-auto p-0 overflow-hidden aspect-video'>
-        {isImgAvailable.bg && (
-          <Image
-            src={`/${page}/preview-bg.png`}
-            alt={`Background`}
-            fill={true}
-            className='object-cover'
-          />
-        )}
-
-        {(() => {
-          if (isImgAvailable.preview) {
-            return (
-              <Image
-                src={`/${page}/${post}/preview.png`}
-                alt={`${title} preview`}
-                fill={true}
-                priority={true}
-                className='object-contain'
-              />
-            );
-          } else if (stack[0].length !== 0) {
-            return <Preview stack={stack} />;
-          }
-        })()}
+        <PostHeader page={page} post={post} title={title} stack={stack} />
       </header>
       <hgroup className='m-0'>
         <h4 className='truncate'>{title}</h4>
