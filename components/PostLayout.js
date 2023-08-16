@@ -20,7 +20,7 @@ export default function PostLayout({
   page,
   children,
 }) {
-  const bgPath = path.join('public', page, `preview-bg.png`);
+  const bgPath = path.join('public', `/${page}/preview-bg.png`);
   const imgPath = path.join('public', headerImg);
 
   return (
@@ -39,22 +39,27 @@ export default function PostLayout({
               className='object-cover'
             />
           )}
-          {fs.existsSync(imgPath) ? (
-            <Image
-              src={headerImg}
-              alt={`${title} preview`}
-              fill={true}
-              priority={true}
-              className='object-contain'
-            />
-          ) : (
-            <Preview stack={stack} />
-          )}
+
+          {(() => {
+            if (fs.existsSync(imgPath)) {
+              return (
+                <Image
+                  src={headerImg}
+                  alt={`${title} preview`}
+                  fill={true}
+                  priority={true}
+                  className='object-contain'
+                />
+              );
+            } else if (stack.length !== 0) {
+              return <Preview stack={stack} />;
+            }
+          })()}
         </div>
       </header>
 
-      <div className='flex max-sm:flex-col  gap-4 sm:gap-2 mb-4 sm:mb-2 animate-fade-in'>
-        <article className='my-0 flex-auto'>
+      <div className='flex gap-4 mb-4 max-sm:flex-col sm:gap-2 sm:mb-2 animate-fade-in'>
+        <article className='flex-auto my-0'>
           {date.length !== 0 ? (
             <hgroup>
               <h1>{title}</h1>
@@ -70,14 +75,14 @@ export default function PostLayout({
         </article>
 
         {stack[0].length !== 0 && (
-          <article className='my-0 sticky top-0 sm:flex-none w-full sm:w-fit h-fit'>
+          <article className='sticky top-0 w-full my-0 sm:flex-none sm:w-fit h-fit'>
             <h5 className='mb-2 text-[var(--h1-color)] max-sm:text-xl'>
               Stack
             </h5>
             <ul className='mb-0'>
               {stack.map((skill) => (
                 <li key={skill} className='mb-2 list-none last:mb-0'>
-                  <small className='inline-flex gap-2 items-center max-sm:text-base'>
+                  <small className='inline-flex items-center gap-2 max-sm:text-base'>
                     <StackSvg
                       skill={skill}
                       className='w-4 h-4 sm:w-[var(--font-size)] sm:h-[var(--font-size)]'
@@ -98,7 +103,7 @@ export default function PostLayout({
                   type='button'
                   className='mt-4 mb-0 outline text-[var(--contrast-inverse)] border-[var(--secondary)] hover:text-[var(--primary)] hover:border-[var(--primary)] p-2'
                 >
-                  <small className='inline-flex gap-2 items-center max-sm:text-base'>
+                  <small className='inline-flex items-center gap-2 max-sm:text-base'>
                     <Github className='w-5 h-5 sm:w-4 sm:h-4' />
                     View Source
                   </small>
