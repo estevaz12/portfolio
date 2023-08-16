@@ -51,8 +51,7 @@ export default function PostLayout({
                   className='object-contain'
                 />
               );
-            } else if (stack.length !== 0) {
-              console.log(stack, stack.length);
+            } else if (stack[0].length !== 0) {
               return <Preview stack={stack} />;
             }
           })()}
