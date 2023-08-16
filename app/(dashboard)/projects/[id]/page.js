@@ -16,13 +16,13 @@ export default async function Project({ params }) {
 
   return (
     <PostLayout
+      page='projects'
+      post={id}
       title={post.title}
       date={post.date}
-      headerImg={`/projects/${post.id}/preview.png`}
       stack={post.stack.split(',').sort()}
       github={post.github}
       gallery={gallery}
-      page='projects'
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}

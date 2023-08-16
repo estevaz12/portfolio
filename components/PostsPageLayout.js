@@ -15,11 +15,11 @@ export default function PostsPageLayout({ page }) {
             className='hover:no-underline'
           >
             <PostCard
+              page={page}
+              post={post.id}
               title={post.title}
               desc={post.desc}
               date={post.date}
-              page={page}
-              post={post.id}
               stack={post.stack.split(',').sort()}
             />
           </Link>

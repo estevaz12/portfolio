@@ -44,6 +44,8 @@ export default function RootLayout({ children }) {
 
 // MVP
 // TODO: figure out production img issue (fs.existsSync)
+// TODO: refactor fetching data for posts in the respective pages
+// TODO: loading ui for posts
 // TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts

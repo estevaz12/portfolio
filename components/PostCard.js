@@ -1,17 +1,22 @@
 import Image from 'next/image';
 import Date from './Date';
-import path from 'path';
-import fs from 'fs';
 import Preview from './Preview';
+import { getPostImages } from '@/lib/posts';
 
-export default function PostCard({ title, desc, date, page, post, stack }) {
-  const bgPath = path.join('public', `/${page}/preview-bg.png`);
-  const imgPath = path.join('public', `/${page}/${post}/preview.png`);
+export default async function PostCard({
+  page,
+  post,
+  title,
+  desc,
+  date,
+  stack,
+}) {
+  const isImgAvailable = await getPostImages(page, post);
 
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
       <header className='relative h-auto p-0 overflow-hidden aspect-video'>
-        {fs.existsSync(bgPath) && (
+        {isImgAvailable.bg && (
           <Image
             src={`/${page}/preview-bg.png`}
             alt={`Background`}
@@ -21,7 +26,7 @@ export default function PostCard({ title, desc, date, page, post, stack }) {
         )}
 
         {(() => {
-          if (fs.existsSync(imgPath)) {
+          if (isImgAvailable.preview) {
             return (
               <Image
                 src={`/${page}/${post}/preview.png`}

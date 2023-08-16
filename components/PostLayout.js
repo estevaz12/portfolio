@@ -5,23 +5,21 @@ import { skills } from '@/lib/skills';
 import Gallery from './Gallery';
 import Preview from './Preview';
 import StackSvg from './StackSvg';
-import path from 'path';
-import fs from 'fs';
 import Github from '@/icons/ui/github.svg';
 import MobilePostNav from './MobilePostNav';
+import { getPostImages } from '@/lib/posts';
 
-export default function PostLayout({
+export default async function PostLayout({
+  page,
+  post,
   title,
   date,
-  headerImg,
   stack,
   github,
   gallery,
-  page,
   children,
 }) {
-  const bgPath = path.join('public', `/${page}/preview-bg.png`);
-  const imgPath = path.join('public', headerImg);
+  const isImgAvailable = await getPostImages(page, post);
 
   return (
     <>
@@ -31,7 +29,7 @@ export default function PostLayout({
 
       <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] mb-8 animate-fade-in'>
         <div className='w-full sm:w-auto h-auto sm:h-full aspect-video preview-shadow rounded-[var(--border-radius)] relative overflow-hidden -z-10'>
-          {fs.existsSync(bgPath) && (
+          {isImgAvailable.bg && (
             <Image
               src={`/${page}/preview-bg.png`}
               alt={`Background`}
@@ -41,10 +39,10 @@ export default function PostLayout({
           )}
 
           {(() => {
-            if (fs.existsSync(imgPath)) {
+            if (isImgAvailable.preview) {
               return (
                 <Image
-                  src={headerImg}
+                  src={`/${page}/${post}/preview.png`}
                   alt={`${title} preview`}
                   fill={true}
                   priority={true}

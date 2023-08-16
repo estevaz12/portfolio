@@ -16,13 +16,13 @@ export default async function Post({ params }) {
 
   return (
     <PostLayout
+      page='about'
+      post={id}
       title={post.title}
       date={post.date}
-      headerImg={`/about/${post.id}/preview.png`}
       stack={post.stack.split(',').sort()}
       github={post.github}
       gallery={gallery}
-      page='about'
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
