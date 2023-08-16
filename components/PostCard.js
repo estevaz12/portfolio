@@ -19,18 +19,23 @@ export default function PostCard({ title, desc, date, page, post, stack }) {
             className='object-cover'
           />
         )}
-        {fs.existsSync(imgPath) ? (
-          <Image
-            src={`/${page}/${post}/preview.png`}
-            alt={`${title} preview`}
-            fill={true}
-            sizes='(max-width: 1280px) 25rem'
-            priority={true}
-            className='object-contain'
-          />
-        ) : (
-          <Preview stack={stack} />
-        )}
+
+        {(() => {
+          if (fs.existsSync(imgPath)) {
+            return (
+              <Image
+                src={headerImg}
+                alt={`${title} preview`}
+                fill={true}
+                priority={true}
+                className='object-contain'
+              />
+            );
+          } else if (stack.length !== 0) {
+            console.log(stack, stack.length);
+            return <Preview stack={stack} />;
+          }
+        })()}
       </header>
       <hgroup className='m-0'>
         <h4 className='truncate'>{title}</h4>
