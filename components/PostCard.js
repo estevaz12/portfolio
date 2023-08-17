@@ -5,6 +5,8 @@ import PostHeader from './PostHeader';
 export default async function PostCard({
   page,
   post,
+  bgAvailable,
+  previewAvailable,
   title,
   desc,
   date,
@@ -13,7 +15,14 @@ export default async function PostCard({
   return (
     <article className='m-0 transition ease-in-out hover:scale-[1.025] duration-300'>
       <header className='relative h-auto p-0 overflow-hidden aspect-video'>
-        <PostHeader page={page} post={post} title={title} stack={stack} />
+        <PostHeader
+          page={page}
+          post={post}
+          bgAvailable={bgAvailable}
+          previewAvailable={previewAvailable}
+          title={title}
+          stack={stack}
+        />
       </header>
       <hgroup className='m-0'>
         <h4 className='truncate'>{title}</h4>

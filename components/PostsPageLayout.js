@@ -17,6 +17,8 @@ export default function PostsPageLayout({ page }) {
             <PostCard
               page={page}
               post={post.id}
+              bgAvailable={post.bgAvailable}
+              previewAvailable={post.previewAvailable}
               title={post.title}
               desc={post.desc}
               date={post.date}
