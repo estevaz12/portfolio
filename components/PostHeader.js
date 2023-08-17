@@ -5,20 +5,22 @@ import Preview from './Preview';
 import { useState } from 'react';
 
 export default function PostHeader({ page, post, title, stack }) {
-  // const isImgAvailable = await getPostImages(page, post);
-  const [imgErr, setImgErr] = useState({});
+  const [bgError, setBgError] = useState(false);
+  const [previewError, setPreviewError] = useState(false);
 
   const handleImgErr = (img) => {
-    console.log('Image failed to load. Handling...');
-    setImgErr((errors) => ({
-      ...errors,
-      [img]: true,
-    }));
+    console.log('Image not available. Handling...');
+
+    if (img === 'bg') {
+      setBgError(true);
+    } else {
+      setPreviewError(true);
+    }
   };
 
   return (
     <>
-      {!imgErr.bg && (
+      {!bgError && (
         <Image
           src={`/${page}/preview-bg.png`}
           alt={`Background`}
@@ -29,7 +31,7 @@ export default function PostHeader({ page, post, title, stack }) {
       )}
 
       {(() => {
-        if (!imgErr.preview) {
+        if (!previewError) {
           return (
             <Image
               src={`/${page}/${post}/preview.png`}

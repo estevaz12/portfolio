@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Date from './Date';
 import PostHeader from './PostHeader';
 
