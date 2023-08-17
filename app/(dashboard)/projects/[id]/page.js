@@ -12,18 +12,19 @@ export async function generateStaticParams() {
 export default async function Project({ params }) {
   const { id } = params;
   const post = await getPostData('projects', id);
-  const gallery = getPostGallery('projects', id);
-  console.log(gallery.length);
+  console.log(post.gallery.length);
 
   return (
     <PostLayout
       page='projects'
       post={id}
+      bgAvailable={post.bgAvailable}
+      previewAvailable={post.previewAvailable}
       title={post.title}
       date={post.date}
       stack={post.stack.split(',').sort()}
       github={post.github}
-      gallery={gallery}
+      gallery={post.gallery}
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}

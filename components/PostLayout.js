@@ -12,6 +12,8 @@ import PostHeader from './PostHeader';
 export default async function PostLayout({
   page,
   post,
+  bgAvailable,
+  previewAvailable,
   title,
   date,
   stack,
@@ -27,7 +29,14 @@ export default async function PostLayout({
 
       <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] mb-8 animate-fade-in'>
         <div className='w-full sm:w-auto h-auto sm:h-full aspect-video preview-shadow rounded-[var(--border-radius)] relative overflow-hidden -z-10'>
-          <PostHeader page={page} post={post} title={title} stack={stack} />
+          <PostHeader
+            page={page}
+            post={post}
+            bgAvailable={bgAvailable}
+            previewAvailable={previewAvailable}
+            title={title}
+            stack={stack}
+          />
         </div>
       </header>
 

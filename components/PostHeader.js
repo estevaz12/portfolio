@@ -1,8 +1,5 @@
-// 'use client';
-
 import Image from 'next/image';
 import Preview from './Preview';
-// import { useState } from 'react';
 
 export default function PostHeader({
   page,
@@ -12,19 +9,6 @@ export default function PostHeader({
   title,
   stack,
 }) {
-  // const [bgError, setBgError] = useState(false);
-  // const [previewError, setPreviewError] = useState(false);
-
-  // const handleImgErr = (img) => {
-  //   console.log('Image not available. Handling...');
-
-  //   if (img === 'bg') {
-  //     setBgError(true);
-  //   } else {
-  //     setPreviewError(true);
-  //   }
-  // };
-
   return (
     <>
       {bgAvailable && (
@@ -33,7 +17,6 @@ export default function PostHeader({
           alt={`Background`}
           fill={true}
           className='object-cover'
-          // onError={() => handleImgErr('bg')}
         />
       )}
 
@@ -46,7 +29,6 @@ export default function PostHeader({
               fill={true}
               priority={true}
               className='object-contain'
-              // onError={() => handleImgErr('preview')}
             />
           );
         } else if (stack[0].length !== 0) {

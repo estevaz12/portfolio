@@ -12,7 +12,6 @@ export async function generateStaticParams() {
 export default async function Post({ params }) {
   const { id } = params;
   const post = await getPostData('about', id);
-  const gallery = getPostGallery('about', id);
 
   return (
     <PostLayout
