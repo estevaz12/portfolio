@@ -3,11 +3,11 @@ import Image from 'next/image';
 export default function Gallery({ images }) {
   return (
     <div className='gap-2 space-y-4 sm:space-y-2 sm:columns-2 animate-fade-in'>
-      {images.map((image) => (
+      {images.map((img) => (
         <Image
-          key={image.id}
-          src={image.src}
-          alt={image.alt}
+          key={img.id}
+          src={img.src}
+          alt={img.alt}
           width={1440}
           height={900}
           loading='lazy'

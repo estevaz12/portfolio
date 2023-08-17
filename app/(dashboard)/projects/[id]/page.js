@@ -13,6 +13,7 @@ export default async function Project({ params }) {
   const { id } = params;
   const post = await getPostData('projects', id);
   const gallery = getPostGallery('projects', id);
+  console.log(gallery.length);
 
   return (
     <PostLayout
