@@ -1,6 +1,8 @@
 import PostLayout from '@/components/PostLayout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 
+export const dynamic = 'force-static';
+
 export async function generateStaticParams() {
   const about = getAllPostIds('about');
 

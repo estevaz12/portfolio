@@ -1,6 +1,8 @@
 import PostLayout from '@/components/PostLayout';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 
+export const dynamic = 'force-static';
+
 export async function generateStaticParams() {
   const projects = getAllPostIds('projects');
 
@@ -12,7 +14,7 @@ export async function generateStaticParams() {
 export default async function Project({ params }) {
   const { id } = params;
   const post = await getPostData('projects', id);
-  console.log(post.gallery.length);
+  console.log(post.gallery);
 
   return (
     <PostLayout

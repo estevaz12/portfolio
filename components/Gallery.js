@@ -10,7 +10,6 @@ export default function Gallery({ images }) {
           alt={img.alt}
           width={1440}
           height={900}
-          loading='lazy'
           className='w-full h-auto rounded-[var(--border-radius)]'
         />
       ))}
