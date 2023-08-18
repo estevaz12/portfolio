@@ -1,5 +1,5 @@
 import PostLayout from '@/components/PostLayout';
-import { getAllPostIds, getPostData, getPostGallery } from '@/lib/posts';
+import { getAllPostIds, getPostData } from '@/lib/posts';
 
 export async function generateStaticParams() {
   const about = getAllPostIds('about');
@@ -17,11 +17,13 @@ export default async function Post({ params }) {
     <PostLayout
       page='about'
       post={id}
+      bgAvailable={post.bgAvailable}
+      previewAvailable={post.previewAvailable}
       title={post.title}
       date={post.date}
       stack={post.stack.split(',').sort()}
       github={post.github}
-      gallery={gallery}
+      gallery={post.gallery}
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}

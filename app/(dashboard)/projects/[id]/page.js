@@ -1,5 +1,5 @@
 import PostLayout from '@/components/PostLayout';
-import { getAllPostIds, getPostData, getPostGallery } from '@/lib/posts';
+import { getAllPostIds, getPostData } from '@/lib/posts';
 
 export async function generateStaticParams() {
   const projects = getAllPostIds('projects');
