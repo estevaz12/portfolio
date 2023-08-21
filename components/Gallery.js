@@ -2,13 +2,7 @@ import { getPostGallery } from '@/lib/posts';
 import Image from 'next/image';
 
 export default async function Gallery({ page, post }) {
-  // const images = await fetch(
-  //   process.env.NEXT_PUBLIC_API_URL + `/api/${page}/${post}/gallery`
-  // ).then((res) => res.json());
-  // console.log(images);
-
   const images = getPostGallery(page, post);
-  console.log(images);
 
   return (
     <div className='gap-2 space-y-4 sm:space-y-2 sm:columns-2 animate-fade-in'>
