@@ -1,9 +1,7 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Date from './Date';
 import { skills } from '@/lib/skills';
 import Gallery from './Gallery';
-import Preview from './Preview';
 import StackSvg from './StackSvg';
 import Github from '@/icons/ui/github.svg';
 import MobilePostNav from './MobilePostNav';

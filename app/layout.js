@@ -43,10 +43,9 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: figure out production img issue (fs.existsSync)
-// TODO: refactor fetching data for posts in the respective pages
-// TODO: loading ui for posts
 // TODO: blur for loading images
+// TODO: favicon (my profile pic)
+// TODO: animated png not working
 // TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts
