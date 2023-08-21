@@ -18,7 +18,6 @@ export default async function PostLayout({
   date,
   stack,
   github,
-  gallery,
   children,
 }) {
   return (
@@ -96,7 +95,7 @@ export default async function PostLayout({
         )}
       </div>
 
-      {gallery.length !== 0 && <Gallery images={gallery} />}
+      <Gallery page={page} post={post} />
     </>
   );
 }

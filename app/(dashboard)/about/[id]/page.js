@@ -23,7 +23,6 @@ export default async function Post({ params }) {
       date={post.date}
       stack={post.stack.split(',').sort()}
       github={post.github}
-      gallery={post.gallery}
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
