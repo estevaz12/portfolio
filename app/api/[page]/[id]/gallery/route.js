@@ -13,7 +13,7 @@ export async function GET(request, { params }) {
 // TODO: if that doesn't work make an api route --> might be the best approach
 // get posts gallery image names from page name and post id
 function getPostGallery(page, id) {
-  const dir = path.resolve('./public', page, id, 'gallery');
+  const dir = path.resolve(process.env.PUBLIC_DIR, page, id, 'gallery');
   console.log(dir);
   let fileNames = [];
 
