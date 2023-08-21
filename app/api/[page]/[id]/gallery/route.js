@@ -2,6 +2,8 @@ import path from 'path';
 import fs from 'fs';
 import { NextResponse } from 'next/server';
 
+const PUBLIC_DIR = path.resolve('./public');
+
 export async function GET(request, { params }) {
   const page = params.page;
   const post = params.id;
@@ -13,7 +15,7 @@ export async function GET(request, { params }) {
 // TODO: if that doesn't work make an api route --> might be the best approach
 // get posts gallery image names from page name and post id
 function getPostGallery(page, id) {
-  const dir = path.resolve('./', page, id, 'gallery');
+  const dir = path.resolve(PUBLIC_DIR, page, id, 'gallery');
   console.log(dir);
   let fileNames = [];
 
