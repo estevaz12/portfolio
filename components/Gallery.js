@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default async function Gallery({ page, post }) {
   const images = await fetch(
-    process.env.URL + `/api/${page}/${post}/gallery`
+    process.env.NEXT_PUBLIC_API_URL + `/api/${page}/${post}/gallery`
   ).then((res) => res.json());
   console.log(images);
 
