@@ -36,7 +36,7 @@ export default function LockScreen() {
             </h4>
             <p className='text-white drop-shadow-sm'>
               <Check className='w-[var(--font-size)] h-[var(--font-size)]' />{' '}
-              Currently looking for work
+              Looking for work
             </p>
           </div>
         </div>

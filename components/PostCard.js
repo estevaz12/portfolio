@@ -21,6 +21,7 @@ export default async function PostCard({
           previewImg={previewImg}
           title={title}
           stack={stack}
+          sizes='(max-width: 640px) 570px, (max-width: 768px) 280px, 330px'
         />
       </header>
       <hgroup className='m-0'>
@@ -37,5 +38,3 @@ export default async function PostCard({
     </article>
   );
 }
-
-// TODO: add sizes prop to images with fill=true on different breakpoints

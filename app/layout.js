@@ -1,12 +1,13 @@
 import './styles/globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
 import Background from '@/components/Background';
+import { jsonLd } from '@/lib/jsonLd';
 
 const inter = Inter({ subsets: ['latin'], variable: '--inter' });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
 
 export const metadata = {
-  metadataBase: new URL('https://portfolio-estevaz12.vercel.app/'),
+  metadataBase: new URL('https://portfolio-estevaz12.vercel.app'),
   // alternates: {
   //   canonical: '/',
   //   languages: {
@@ -14,17 +15,22 @@ export const metadata = {
   //     es: '/es',
   //   },
   // },
-  title: `@estevaz12's Portfolio`,
-  description: `@estevaz12's personal portfolio`,
+  title: `@estevaz12 | Full-stack Developer - Looking for work`,
+  description: `Welcome to my portfolio! I'm mostly a front-end developer with some back-end, databases, and data science experience. Here, you'll find a collection of my work and skills as well as info about me.  Take a look around and get to know me better. Thank you for visiting!`,
   // openGraph: {
-  //   title: t('title'),
+  //   title: '@estevaz12 | Full-stack Developer - Looking for work',
   //   description: t('description'),
-  //   url: 'https://aquamanps.vercel.app',
-  //   siteName: 'Aquaman Pool Services',
+  //   url: 'https://portfolio-estevaz12.vercel.app/',
+  //   siteName: '@estevaz12 | Full-stack Developer - Looking for work',
   //   images: '/api/og',
   //   type: 'website',
   // },
   themeColor: '#121b21',
+  robots: {
+    googleBot: {
+      nositelinkssearchbox: true,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -37,13 +43,17 @@ export default function RootLayout({ children }) {
       <body>
         <Background />
         {children}
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
 }
 
 // MVP
-// TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts
 // TODO: college experience as well

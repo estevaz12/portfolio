@@ -33,6 +33,7 @@ export default async function PostLayout({
             previewImg={previewImg}
             title={title}
             stack={stack}
+            sizes='(max-width: 768px) 575px, (max-width: 1024px) 785px, 1030px'
           />
         </div>
       </header>

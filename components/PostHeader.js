@@ -4,11 +4,11 @@ import { blurDataURL } from '@/lib/blurDataURL';
 
 export default function PostHeader({
   page,
-  post,
   bgAvailable,
   previewImg,
   title,
   stack,
+  sizes,
 }) {
   return (
     <>
@@ -17,6 +17,7 @@ export default function PostHeader({
           src={`/${page}/preview-bg.png`}
           alt={`Background`}
           fill={true}
+          sizes={sizes}
           placeholder='blur'
           blurDataURL={blurDataURL}
           className='object-cover'
@@ -30,6 +31,7 @@ export default function PostHeader({
               src={previewImg}
               alt={`${title} preview`}
               fill={true}
+              sizes={sizes}
               priority={true}
               placeholder='blur'
               blurDataURL={blurDataURL}
