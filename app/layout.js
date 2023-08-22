@@ -43,8 +43,6 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: blur for loading images
-// TODO: favicon (my profile pic)
 // TODO: animated png not working
 // TODO: bare SEO
 // TODO: basic analytics
@@ -63,3 +61,4 @@ export default function RootLayout({ children }) {
 // TODO: i18n?
 // TODO: images in posts
 // TODO: animations
+// TODO: dynamic og images

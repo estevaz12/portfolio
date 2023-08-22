@@ -1,4 +1,5 @@
 import { getPostGallery } from '@/lib/posts';
+import { blurDataURL } from '@/lib/blurDataURL';
 import Image from 'next/image';
 
 export default async function Gallery({ page, post }) {
@@ -13,6 +14,8 @@ export default async function Gallery({ page, post }) {
           alt={img.alt}
           width={1440}
           height={900}
+          placeholder='blur'
+          blurDataURL={blurDataURL}
           className='w-full h-auto rounded-[var(--border-radius)]'
         />
       ))}

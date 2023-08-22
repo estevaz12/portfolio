@@ -18,7 +18,7 @@ export default async function Project({ params }) {
       page='projects'
       post={id}
       bgAvailable={post.bgAvailable}
-      previewAvailable={post.previewAvailable}
+      previewImg={post.previewImg}
       title={post.title}
       date={post.date}
       stack={post.stack.split(',').sort()}

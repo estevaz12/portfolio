@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Preview from './Preview';
+import { blurDataURL } from '@/lib/blurDataURL';
 
 export default function PostHeader({
   page,
   post,
   bgAvailable,
-  previewAvailable,
+  previewImg,
   title,
   stack,
 }) {
@@ -16,18 +17,22 @@ export default function PostHeader({
           src={`/${page}/preview-bg.png`}
           alt={`Background`}
           fill={true}
+          placeholder='blur'
+          blurDataURL={blurDataURL}
           className='object-cover'
         />
       )}
 
       {(() => {
-        if (previewAvailable) {
+        if (previewImg) {
           return (
             <Image
-              src={`/${page}/${post}/preview.png`}
+              src={previewImg}
               alt={`${title} preview`}
               fill={true}
               priority={true}
+              placeholder='blur'
+              blurDataURL={blurDataURL}
               className='object-contain'
             />
           );

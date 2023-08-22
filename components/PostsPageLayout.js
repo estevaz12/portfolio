@@ -18,7 +18,7 @@ export default function PostsPageLayout({ page }) {
               page={page}
               post={post.id}
               bgAvailable={post.bgAvailable}
-              previewAvailable={post.previewAvailable}
+              previewImg={post.previewImg}
               title={post.title}
               desc={post.desc}
               date={post.date}

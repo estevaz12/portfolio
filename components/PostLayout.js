@@ -11,7 +11,7 @@ export default async function PostLayout({
   page,
   post,
   bgAvailable,
-  previewAvailable,
+  previewImg,
   title,
   date,
   stack,
@@ -30,7 +30,7 @@ export default async function PostLayout({
             page={page}
             post={post}
             bgAvailable={bgAvailable}
-            previewAvailable={previewAvailable}
+            previewImg={previewImg}
             title={title}
             stack={stack}
           />

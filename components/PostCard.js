@@ -5,7 +5,7 @@ export default async function PostCard({
   page,
   post,
   bgAvailable,
-  previewAvailable,
+  previewImg,
   title,
   desc,
   date,
@@ -18,7 +18,7 @@ export default async function PostCard({
           page={page}
           post={post}
           bgAvailable={bgAvailable}
-          previewAvailable={previewAvailable}
+          previewImg={previewImg}
           title={title}
           stack={stack}
         />
