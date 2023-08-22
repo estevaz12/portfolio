@@ -34,6 +34,7 @@ export default function PostHeader({
               placeholder='blur'
               blurDataURL={blurDataURL}
               className='object-contain'
+              unoptimized={previewImg.endsWith('.apng') ? true : false}
             />
           );
         } else if (stack[0].length !== 0) {
