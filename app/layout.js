@@ -43,7 +43,6 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: animated png not working
 // TODO: bare SEO
 // TODO: basic analytics
 // TODO: add content to posts

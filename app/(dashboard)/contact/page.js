@@ -39,7 +39,7 @@ export default function Contact() {
               height={128}
               className='inline w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10'
             />
-            <h3 className='mb-0 text-[var(--primary)] hover:text-[var(--primary-hover)]'>
+            <h3 className='no-underline mb-0 text-[var(--primary)] hover:underline'>
               LinkedIn
             </h3>
           </Link>
@@ -50,7 +50,7 @@ export default function Contact() {
             target='_blank'
           >
             <Github className='w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10' />
-            <h3 className='mb-0 text-[var(--primary)] hover:text-[var(--primary-hover)]'>
+            <h3 className='no-underline mb-0 text-[var(--primary)] hover:underline'>
               GitHub
             </h3>
           </Link>
