@@ -21,7 +21,7 @@ export default async function PostCard({
           previewImg={previewImg}
           title={title}
           stack={stack}
-          sizes='(max-width: 640px) 570px, (max-width: 768px) 280px, 330px'
+          sizes='(max-width: 640px) 570px, (max-width: 768px) 300px, 400px'
         />
       </header>
       <hgroup className='m-0'>

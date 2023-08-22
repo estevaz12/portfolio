@@ -27,7 +27,9 @@ export const metadata = {
   // },
   themeColor: '#121b21',
   robots: {
+    index: true,
     googleBot: {
+      index: true,
       nositelinkssearchbox: true,
     },
   },
