@@ -2,6 +2,8 @@ import './styles/globals.css';
 import { Inter, Familjen_Grotesk } from 'next/font/google';
 import Background from '@/components/Background';
 import { jsonLd } from '@/lib/jsonLd';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+import TrackPageViews from '@/components/TrackPageViews';
 
 const inter = Inter({ subsets: ['latin'], variable: '--inter' });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
@@ -43,6 +45,13 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${grotesk.variable} scroll-smooth`}
     >
       <body>
+        <GoogleAnalytics
+          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
+        />
+        <TrackPageViews
+          GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
+        />
+
         <Background />
         {children}
 
@@ -56,7 +65,7 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: basic analytics
+// TODO: basic analytics (verify)
 // TODO: add content to posts
 // TODO: college experience as well
 
