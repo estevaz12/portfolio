@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /contact/
 Disallow: /api/
+Sitemap: https://estebanvc.vercel.app/sitemap.xml
