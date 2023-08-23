@@ -33,6 +33,9 @@ export const metadata = {
       nositelinkssearchbox: true,
     },
   },
+  verification: {
+    google: '0BgFLHPvDOLpz-unKUCKkfkkAUZUfZtuOKYO_r98EFs',
+  },
 };
 
 export default function RootLayout({ children }) {
