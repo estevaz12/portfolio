@@ -66,19 +66,19 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: basic analytics (verify)
-// TODO: add content to posts
-// TODO: college experience as well
+// TODO: upload projects to github: lambo-db, web-dev-bakery
+// TODO: link repo
+// TODO: add close button to posts page
+// TODO: check emojis on other devices
+// TODO: scrolling issue
 
 // for later
+// TODO: add bio images
 // TODO: fade out animation with FramerMotion
 // TODO: search by skill
 // TODO: loading skeleton
 // TODO: clicking skill to see projects
-// TODO: add courses
 // TODO: light theme
-// TODO: seo
-// TODO: analytics
 // TODO: i18n?
 // TODO: images in posts
 // TODO: animations

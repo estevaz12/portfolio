@@ -1,9 +1,20 @@
 ---
 title: 'Portfolio'
-desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+desc: 'Read more about how I made this portfolio and features in development'
 date: 'dev'
 stack: 'nextjs,react,js,tailwind,css,html,gAnalytics,markdown'
 github: 'https://github.com/estevaz12/portfolio'
 ---
 
-portfolio
+- Developed this portfolio website using React and Next.js
+- Used CSS, Pico.css, and Tailwind CSS to style the website and make it responsive and user-friendly
+- Applied SEO best practices and techniques to optimize the website for search engines and increase its visibility and traffic by adding sitemap.xml and robots.txt files and submitting the site to Google through the Google Search Console
+- Integrated Google Analytics to track user behavior
+
+In development:
+
+- i18n for Spanish speakers
+- Page animations with FramerMotion
+- Filtering projects and skills
+- Dynamic Open Graph images
+- Light theme

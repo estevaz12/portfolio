@@ -1,9 +1,37 @@
 ---
 title: 'Education'
-desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+desc: "Learn more about my degree and courses I've taken"
 date: ''
 stack: ''
 github: ''
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus at urna condimentum mattis pellentesque id nibh. Quam nulla porttitor massa id neque. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Egestas dui id ornare arcu odio ut sem. Eleifend quam adipiscing vitae proin sagittis. Elit sed vulputate mi sit amet. Eu volutpat odio facilisis mauris sit amet. Velit ut tortor pretium viverra suspendisse potenti. Mattis enim ut tellus elementum sagittis. Vel quam elementum pulvinar etiam non quam. Sit amet risus nullam eget felis. Non diam phasellus vestibulum lorem sed risus. Amet venenatis urna cursus eget nunc scelerisque. Ornare aenean euismod elementum nisi quis eleifend quam.
+**Carnegie Mellon University**, May 2022
+
+Bachelor of Science in Information Systems  
+Minor in Environmental & Sustainability Studies
+
+### Courses
+
+Technical:
+
+- IS Consulting Project
+- Web App Design and Development
+- Mobile Web Design and Development
+- iOS App Design and Development
+- Database Design and Development
+- Practical Data Science
+- Intro to Data Structures
+- Fundamentals of Programming and Computer Science
+- Intro to Geographical Information Systems
+- Apache Camel Framework with Spring Boot (Udemy)
+- Go Programming (Golang): The Complete Developer's Guide (Udemy)
+
+Business:
+
+- Project Management
+- New Venture Creation
+- Entrepreneurial Mindset
+- Intro to Entrepreneurship
+- Management Across Cultures
+- Team Dynamics and Leadership

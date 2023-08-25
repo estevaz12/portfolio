@@ -26,7 +26,7 @@ export default async function PostCard({
       </header>
       <hgroup className='m-0'>
         <h4 className='truncate'>{title}</h4>
-        <p className='m-0 line-clamp-4 text-[var(--contrast-inverse)]'>
+        <p className='m-0 line-clamp-3 text-[var(--contrast-inverse)]'>
           <small>{desc}</small>
         </p>
         {date.length !== 0 && (

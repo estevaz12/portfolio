@@ -26,7 +26,7 @@ export default async function Project({ params }) {
     >
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        className='[&_li]:mb-[var(--typography-spacing-vertical)] [&_:last-child]:mb-0 [&_li]:list-image-[url(/laptop.svg)] [&_li]:list-inside marker:mr-4'
+        className='[&_li]:mb-[var(--typography-spacing-vertical)] [&_:last-child]:mb-0 [&_li]:list-image-[url(/laptop.svg)] [&_li]:list-inside marker:mr-4 [&_h4]:mb-1'
       />
     </PostLayout>
   );
