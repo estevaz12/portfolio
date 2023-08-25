@@ -66,9 +66,6 @@ export default function RootLayout({ children }) {
 }
 
 // MVP
-// TODO: upload projects to github: lambo-db, web-dev-bakery
-// TODO: link repo
-// TODO: add close button to posts page
 // TODO: check emojis on other devices
 // TODO: scrolling issue
 

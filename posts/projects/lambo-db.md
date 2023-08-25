@@ -3,7 +3,7 @@ title: 'DB Design Project - Lamborghini'
 desc: 'Designed, built, and analyzed a relational database to make business recommendations'
 date: '2019-04-30'
 stack: 'sql,mysql'
-github: ''
+github: 'https://github.com/estevaz12/lambo-db'
 ---
 
 - Designed a relational database using the ERD model of a Lamborghini car dealership

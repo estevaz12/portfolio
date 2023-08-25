@@ -6,6 +6,7 @@ import StackSvg from './StackSvg';
 import Github from '@/icons/ui/github.svg';
 import MobilePostNav from './MobilePostNav';
 import PostHeader from './PostHeader';
+import Header from './Header';
 
 export default async function PostLayout({
   page,
@@ -24,7 +25,11 @@ export default async function PostLayout({
         <MobilePostNav />
       </div>
 
-      <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] mb-8 animate-fade-in'>
+      <div className='hidden md:block animate-fade-in'>
+        <Header title={''} isSearchEnabled={false} />
+      </div>
+
+      <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] md:mt-0 mb-8 animate-fade-in'>
         <div className='w-full sm:w-auto h-auto sm:h-full aspect-video preview-shadow rounded-[var(--border-radius)] relative overflow-hidden -z-10'>
           <PostHeader
             page={page}

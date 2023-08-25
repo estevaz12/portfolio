@@ -1,6 +1,7 @@
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
 import PostCard from '@/components/PostCard';
+import Header from './Header';
 
 export default function PostsPageLayout({ page }) {
   const postsData = getSortedPostsData(page);

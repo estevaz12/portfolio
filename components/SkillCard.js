@@ -10,7 +10,7 @@ export default function SkillCard({ skill }) {
       </div>
 
       {/* TODO: link to projects page filtered by the skill */}
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-row-reverse justify-end gap-10 md:gap-2 md:flex-col md:justify-normal'>
         {skill.courses > 0 && (
           <div>
             <span className='inline-block w-6 h-6 text-center rounded-full bg-green text-coffee'>
