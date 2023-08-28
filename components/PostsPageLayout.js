@@ -13,7 +13,6 @@ export default function PostsPageLayout({ page }) {
             key={post.id}
             href={`/${page}/${post.id}#content`}
             className='hover:no-underline'
-            scroll={false}
           >
             <PostCard
               page={page}
