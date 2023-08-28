@@ -65,9 +65,6 @@ export default function RootLayout({ children }) {
   );
 }
 
-// MVP
-// TODO: check emojis on other devices
-
 // for later
 // TODO: add bio images
 // TODO: fade out animation with FramerMotion
