@@ -1,7 +1,7 @@
 import { getAllPostIds } from '@/lib/posts';
 
 export default function sitemap() {
-  const baseURL = 'https://portfolio-estevaz12.vercel.app';
+  const baseURL = 'https://estebanvc.vercel.app';
   let siteMap = [
     {
       url: baseURL,
