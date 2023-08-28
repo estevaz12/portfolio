@@ -1,7 +1,6 @@
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
 import PostCard from '@/components/PostCard';
-import Header from './Header';
 
 export default function PostsPageLayout({ page }) {
   const postsData = getSortedPostsData(page);
@@ -14,6 +13,7 @@ export default function PostsPageLayout({ page }) {
             key={post.id}
             href={`/${page}/${post.id}#content`}
             className='hover:no-underline'
+            scroll={false}
           >
             <PostCard
               page={page}

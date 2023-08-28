@@ -67,7 +67,6 @@ export default function RootLayout({ children }) {
 
 // MVP
 // TODO: check emojis on other devices
-// TODO: scrolling issue
 
 // for later
 // TODO: add bio images
