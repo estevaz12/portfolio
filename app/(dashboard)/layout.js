@@ -20,7 +20,7 @@ export default function DashboardLayout({ children }) {
         </div>
         <div
           id='content'
-          className='h-full sm:flex-auto md:basis-5/6 py-[var(--spacing)] container-fluid bg-coffee/75 backdrop-blur-sm overflow-y-scroll overflow-x-hidden animate-fade-in'
+          className='h-full sm:flex-auto md:basis-5/6 py-[var(--spacing)] container-fluid bg-coffee/75 backdrop-blur-sm overflow-x-hidden animate-fade-in'
         >
           {children}
         </div>
