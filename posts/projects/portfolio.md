@@ -13,8 +13,4 @@ github: 'https://github.com/estevaz12/portfolio'
 
 In development:
 
-- i18n for Spanish speakers
-- Page animations with FramerMotion
 - Filtering projects and skills
-- Dynamic Open Graph images
-- Light theme

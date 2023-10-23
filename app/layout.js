@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--inter' });
 const grotesk = Familjen_Grotesk({ subsets: ['latin'], variable: '--grotesk' });
 
 export const metadata = {
-  metadataBase: new URL('https://portfolio-estevaz12.vercel.app'),
+  metadataBase: new URL('https://estebanvc.vercel.app'),
   // alternates: {
   //   canonical: '/',
   //   languages: {
@@ -22,7 +22,7 @@ export const metadata = {
   // openGraph: {
   //   title: '@estevaz12 | Full-stack Developer - Looking for work',
   //   description: t('description'),
-  //   url: 'https://portfolio-estevaz12.vercel.app/',
+  //   url: 'https://estebanvc.vercel.app/',
   //   siteName: '@estevaz12 | Full-stack Developer - Looking for work',
   //   images: '/api/og',
   //   type: 'website',
