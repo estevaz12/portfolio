@@ -1,4 +1,10 @@
-export default function Search({ className }) {
+'use client';
+
+export default function Search({ className, setQuery }) {
+  const handleChange = (e) => {
+    setQuery(e.target.value.toLowerCase());
+  };
+
   return (
     <input
       type='search'
@@ -6,6 +12,7 @@ export default function Search({ className }) {
       name='search'
       placeholder='Search by skill...'
       className={className}
+      onChange={handleChange}
     />
   );
 }

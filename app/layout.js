@@ -65,6 +65,9 @@ export default function RootLayout({ children }) {
   );
 }
 
+// TODO: add node.js to skills
+// TODO: Fix mobile version
+
 // for later
 // TODO: add bio images
 // TODO: fade out animation with FramerMotion
