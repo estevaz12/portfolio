@@ -37,7 +37,7 @@ August 2018 - May 2022
 
 - Led and organized many social and educational events to connect the members of the campus ministry and create a community
 - Led a Bible Study group that met weekly
-- Currently the president of the ministry and mentoring university students in spiritual and emotional wellbeing
+- Mentored university students in spiritual and emotional wellbeing
 
 ---
 
