@@ -65,13 +65,12 @@ export default function RootLayout({ children }) {
   );
 }
 
-// TODO: Fix mobile version
+// TODO: adjust mobile search
 // TODO: cleanup code, make performant, and add comments
 
 // for later
 // TODO: add bio images
 // TODO: fade out animation with FramerMotion
-// TODO: search by skill
 // TODO: loading skeleton
 // TODO: clicking skill to see projects
 // TODO: light theme

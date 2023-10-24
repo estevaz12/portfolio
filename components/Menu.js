@@ -34,7 +34,7 @@ export default function Menu() {
 
       <aside>
         <nav className='flex flex-col h-full gap-4'>
-          <article className='p-0 m-0 overflow-hidden bg-muted/25'>
+          <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0 divide-y'>
               {pages.map((page) => (
                 <li
@@ -53,7 +53,7 @@ export default function Menu() {
             </ul>
           </article>
 
-          <article className='p-0 m-0 overflow-hidden bg-muted/25'>
+          <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0'>
               <li>
                 <Link
@@ -73,7 +73,7 @@ export default function Menu() {
             </ul>
           </article>
 
-          <article className='p-0 m-0 overflow-hidden bg-muted/25'>
+          <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0'>
               {options.map((option) => (
                 <li key={option.name}>

@@ -6,12 +6,19 @@ stack: ''
 github: ''
 ---
 
-**Techbrains Corp.**, Software Developer  
+**Tech Brains Solutions Inc.**, Software Developer  
 June 2022 - Present
 
 - See [Back-end App - Xonnect.io](https://estebanvc.vercel.app/projects/xonnect#content)
 - See [Alfresco Extensions](https://estebanvc.vercel.app/projects/alfresco#content)
 - See [Browser Extension](https://estebanvc.vercel.app/projects/browser-extension#content)
+
+---
+
+**Freelance**, Full-stack Developer  
+June 2023 - August 2023
+
+- See [Website - Aquaman Pool Services](https://estebanvc.vercel.app/projects/aquamanps#content)
 
 ---
 

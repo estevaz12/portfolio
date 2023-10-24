@@ -11,7 +11,7 @@ import Check from '@/emojis/check_mark_button.svg';
 
 export default function LockScreen() {
   return (
-    <div className='flex items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1] container-fluid'>
+    <div className='flex max-sm:items-center items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1] container-fluid'>
       <div className='flex flex-col items-center justify-around h-2/3'>
         <div className='flex gap-4 max-sm:flex-col max-sm:items-center'>
           <Image
