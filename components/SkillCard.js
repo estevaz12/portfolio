@@ -1,5 +1,4 @@
 import StackSvg from './StackSvg';
-import Link from 'next/link';
 
 export default function SkillCard({ skill }) {
   return (

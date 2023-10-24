@@ -1,7 +1,7 @@
 import Date from './Date';
 import PostHeader from './PostHeader';
 
-export default async function PostCard({
+export default function PostCard({
   page,
   post,
   bgAvailable,

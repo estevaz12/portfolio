@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Date from './Date';
-import { skills } from '@/lib/skills';
+import { skills } from '@/lib/skillsData';
 import Gallery from './Gallery';
 import StackSvg from './StackSvg';
 import Github from '@/icons/ui/github.svg';

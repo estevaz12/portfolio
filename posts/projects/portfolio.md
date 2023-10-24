@@ -1,7 +1,7 @@
 ---
 title: 'Portfolio'
 desc: 'Read more about how I made this portfolio and features in development'
-date: 'dev'
+date: '2023-08-31'
 stack: 'nextjs,react,js,tailwind,css,html,gAnalytics,markdown'
 github: 'https://github.com/estevaz12/portfolio'
 ---

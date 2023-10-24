@@ -10,7 +10,7 @@ export default function Skills() {
 
   useEffect(() => {
     const fetchSkills = async () => {
-      const response = await fetch('/api/skills');
+      const response = await fetch('/api/skills/getWithProjectCount');
       const data = await response.json();
       setSkills(data.skills);
     };
