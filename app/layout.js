@@ -67,6 +67,7 @@ export default function RootLayout({ children }) {
 
 // TODO: add node.js to skills
 // TODO: Fix mobile version
+// TODO: cleanup code, make performant, and add comments
 
 // for later
 // TODO: add bio images
