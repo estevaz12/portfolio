@@ -2,7 +2,7 @@
 title: 'Website - Aquaman Pool Services'
 desc: 'Responsive, user-friendly, SEOptimized website for small business using Next.js'
 date: '2023-08-01'
-stack: 'nextjs,css,html,react,gAnalytics,js'
+stack: 'nextjs,css,html,react,gAnalytics,js,nodejs'
 github: 'https://github.com/estevaz12/aquamanps'
 ---
 
