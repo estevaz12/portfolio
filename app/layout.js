@@ -38,6 +38,14 @@ export const metadata = {
   },
 };
 
+/**
+ * This is the RootLayout component.
+ * It wraps the entire page layout and provides common features such as Google Analytics tracking.
+ *
+ * @param {Object} props - The component props.
+ * @param {ReactNode} props.children - The child components to render.
+ * @returns {ReactNode} The rendered component.
+ */
 export default function RootLayout({ children }) {
   return (
     <html
@@ -46,16 +54,23 @@ export default function RootLayout({ children }) {
       className={`${inter.variable} ${grotesk.variable} scroll-smooth`}
     >
       <body>
+        {/* Google Analytics tracking */}
         <GoogleAnalytics
           GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
         />
+
+        {/* Track page views */}
         <TrackPageViews
           GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID}
         />
 
+        {/* Background */}
         <Background />
+
+        {/* Render the child components */}
         {children}
 
+        {/* JSON-LD script */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -64,9 +79,6 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-// TODO: adjust mobile search
-// TODO: cleanup code, make performant, and add comments
 
 // for later
 // TODO: add bio images

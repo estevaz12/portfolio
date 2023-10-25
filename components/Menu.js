@@ -11,9 +11,15 @@ import Dark from '../icons/ui/dark.svg';
 import Light from '../icons/ui/light.svg';
 import Close from '@/icons/ui/close.svg';
 
+/**
+ * Render the Menu component.
+ *
+ * @returns {JSX.Element} The rendered Menu component.
+ */
 export default function Menu() {
   return (
     <div className='h-full container py-[var(--spacing)] flex flex-col gap-4'>
+      {/* Header */}
       <div className='flex items-center justify-between w-full'>
         <div className='flex gap-4'>
           <Image
@@ -27,13 +33,16 @@ export default function Menu() {
           <h1 className='m-0'>Menu</h1>
         </div>
 
+        {/* Close button */}
         <Link href='/'>
           <Close color='#a2afb9' className='w-5 h-5' />
         </Link>
       </div>
 
+      {/* Sidebar */}
       <aside>
         <nav className='flex flex-col h-full gap-4'>
+          {/* Pages */}
           <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0 divide-y'>
               {pages.map((page) => (
@@ -41,6 +50,7 @@ export default function Menu() {
                   key={page.name}
                   className='border-[var(--muted-border-color)] hover:border-[var(--primary-hover)] focus:border-[var(--primary-focus)]'
                 >
+                  {/* Page link */}
                   <Link
                     href={`/${page.name.toLowerCase()}#content`}
                     className='p-4 flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none'
@@ -53,9 +63,11 @@ export default function Menu() {
             </ul>
           </article>
 
+          {/* External link */}
           <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0'>
               <li>
+                {/* Church link */}
                 <Link
                   href='http://disciplestoday.org/'
                   target='_blank'
@@ -73,10 +85,12 @@ export default function Menu() {
             </ul>
           </article>
 
+          {/* Options */}
           <article className='p-0 m-0 overflow-hidden bg-muted/40'>
             <ul className='mx-0'>
               {options.map((option) => (
                 <li key={option.name}>
+                  {/* Resume link */}
                   <Link
                     href={option.href}
                     className='p-4 flex gap-1 items-center text-green hover:bg-[var(--primary-hover)] hover:text-coffee rounded-none focus:bg-transparent'

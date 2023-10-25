@@ -9,6 +9,12 @@ import Ring from '@/emojis/ring.svg';
 import Desktop from '@/emojis/desktop_computer.svg';
 import Check from '@/emojis/check_mark_button.svg';
 
+/**
+ * LockScreen component.
+ * Renders a lock screen interface.
+ *
+ * @returns {JSX.Element} LockScreen component.
+ */
 export default function LockScreen() {
   return (
     <div className='flex max-sm:items-center items-end justify-center w-screen h-screen animate-[fade_3s_ease-in-out_1] container-fluid'>
@@ -19,7 +25,7 @@ export default function LockScreen() {
             alt='Picture of Esteban'
             width={200}
             height={200}
-            priority={true}
+            priority
             className='rounded-full shadow w-28 h-28'
           />
           <div className='space-y-0 max-sm:text-center'>
@@ -73,14 +79,26 @@ export default function LockScreen() {
   );
 }
 
+/**
+ * Renders an option with a link.
+ *
+ * @param {string} href - The URL for the link.
+ * @param {ReactNode} children - The content of the option.
+ * @param {string} name - The name of the option.
+ * @returns {ReactElement} The rendered option.
+ */
 function Option({ href, children, name }) {
   return (
+    // Render a link with the provided URL
     <Link
       href={href}
+      // Apply CSS classes for styling
       className='flex items-center text-white/70 hover:no-underline focus:bg-transparent'
+      // Open the link in a new tab
       target='_blank'
     >
       <small className='drop-shadow-sm hover:text-white/100'>
+        {/* Display the content and name of the option */}
         {children} {name}
       </small>
     </Link>

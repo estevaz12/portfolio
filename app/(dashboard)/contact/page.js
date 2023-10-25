@@ -6,12 +6,20 @@ import Image from 'next/image';
 import Upwork from '@/icons/ui/upwork.svg';
 import Github from '@/icons/ui/github.svg';
 
+/**
+ * Renders the Contact component.
+ * This component displays a contact form and links to social media profiles.
+ */
 export default function Contact() {
   return (
     <>
+      {/* Render the header component */}
       <Header title={'Contact'} isSearchEnabled={false} />
+
+      {/* Render the main content */}
       <div className='flex gap-4 max-sm:flex-col-reverse animate-fade-in'>
         <article className='flex-auto m-0'>
+          {/* Render the contact form */}
           <ContactForm />
         </article>
 
@@ -26,6 +34,7 @@ export default function Contact() {
               Upwork
             </h3>
           </Link> */}
+          {/* Render the LinkedIn link */}
           <Link
             href='https://www.linkedin.com/in/esteban-vc/'
             role='button'
@@ -43,6 +52,8 @@ export default function Contact() {
               LinkedIn
             </h3>
           </Link>
+
+          {/* Render the GitHub link */}
           <Link
             href='https://github.com/estevaz12'
             role='button'

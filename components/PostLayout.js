@@ -8,6 +8,21 @@ import MobilePostNav from './MobilePostNav';
 import PostHeader from './PostHeader';
 import Header from './Header';
 
+/**
+ * Renders the layout for a post page.
+ *
+ * @param {Object} props - The props for the post layout.
+ * @param {string} props.page - The page name.
+ * @param {Object} props.post - The post object.
+ * @param {boolean} props.bgAvailable - Indicates if the background is available.
+ * @param {string} props.previewImg - The URL of the preview image.
+ * @param {string} props.title - The title of the post.
+ * @param {string} props.date - The date of the post.
+ * @param {Array} props.stack - The stack of skills used in the post.
+ * @param {string} props.github - The URL of the GitHub repository.
+ * @param {ReactNode} props.children - The content of the post.
+ * @returns {ReactNode} The rendered post layout.
+ */
 export default async function PostLayout({
   page,
   post,
@@ -21,14 +36,17 @@ export default async function PostLayout({
 }) {
   return (
     <>
+      {/* Render the mobile post nav */}
       <div className='sm:hidden animate-fade-in'>
         <MobilePostNav />
       </div>
 
+      {/* Render the header */}
       <div className='hidden md:block animate-fade-in'>
         <Header title={''} isSearchEnabled={false} />
       </div>
 
+      {/* Render the post header */}
       <header className='flex items-center justify-center w-full h-auto sm:h-1/2 mt-[var(--spacing)] md:mt-0 mb-8 animate-fade-in'>
         <div className='w-full sm:w-auto h-auto sm:h-full aspect-video preview-shadow rounded-[var(--border-radius)] relative overflow-hidden -z-10'>
           <PostHeader
@@ -43,8 +61,10 @@ export default async function PostLayout({
         </div>
       </header>
 
+      {/* Render the post content */}
       <div className='flex gap-4 mb-4 max-sm:flex-col sm:gap-2 sm:mb-2 animate-fade-in'>
         <article className='flex-auto my-0'>
+          {/* Render the post title and date */}
           {date.length !== 0 ? (
             <hgroup>
               <h1>{title}</h1>
@@ -56,9 +76,11 @@ export default async function PostLayout({
             <h1 className='mb-6'>{title}</h1>
           )}
 
+          {/* Render the post content */}
           {children}
         </article>
 
+        {/* Render the stack */}
         {stack[0].length !== 0 && (
           <article className='sticky top-0 w-full my-0 sm:flex-none sm:w-fit h-fit'>
             <h5 className='mb-2 text-[var(--h1-color)] max-sm:text-xl'>
@@ -78,6 +100,7 @@ export default async function PostLayout({
               ))}
             </ul>
 
+            {/* Render the GitHub link */}
             {github.length !== 0 && (
               <Link
                 href={github}
@@ -99,6 +122,7 @@ export default async function PostLayout({
         )}
       </div>
 
+      {/* Render the gallery */}
       <Gallery page={page} post={post} />
     </>
   );

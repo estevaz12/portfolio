@@ -9,6 +9,9 @@ import Lang from '../icons/ui/lang.svg';
 import Dark from '../icons/ui/dark.svg';
 import Light from '../icons/ui/light.svg';
 
+/**
+ * Renders the sidebar component.
+ */
 export default function Sidebar() {
   return (
     <aside className='h-full'>

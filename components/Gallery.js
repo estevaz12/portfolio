@@ -2,6 +2,13 @@ import { getPostGallery } from '@/lib/posts';
 import { blurDataURL } from '@/lib/blurDataURL';
 import Image from 'next/image';
 
+/**
+ * Renders a gallery of images.
+ *
+ * @param {String} page - The page name.
+ * @param {Object} post - The post object.
+ * @returns {JSX.Element} - The rendered gallery component.
+ */
 export default async function Gallery({ page, post }) {
   const images = getPostGallery(page, post);
 

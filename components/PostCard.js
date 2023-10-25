@@ -1,6 +1,20 @@
 import Date from './Date';
 import PostHeader from './PostHeader';
 
+/**
+ * Renders a post card with the given data.
+ *
+ * @param {object} props - The props object containing the post card data.
+ * @param {string} props.page - The page name.
+ * @param {object} props.post - The post object.
+ * @param {boolean} props.bgAvailable - Indicates if background is available.
+ * @param {string} props.previewImg - The URL of the preview image.
+ * @param {string} props.title - The title of the post.
+ * @param {string} props.desc - The description of the post.
+ * @param {string} props.date - The date of the post.
+ * @param {string} props.stack - The stack of technologies used in the post.
+ * @returns {JSX.Element} - The rendered post card.
+ */
 export default function PostCard({
   page,
   post,
