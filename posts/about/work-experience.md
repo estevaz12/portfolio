@@ -7,7 +7,7 @@ github: ''
 ---
 
 **Tech Brains Solutions Inc.**, Software Developer  
-June 2022 - Present
+June 2022 - October 2023
 
 - See [Back-end App - Xonnect.io](https://estebanvc.vercel.app/projects/xonnect#content)
 - See [Alfresco Extensions](https://estebanvc.vercel.app/projects/alfresco#content)
